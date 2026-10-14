@@ -2,9 +2,9 @@
 
 [Game introduction / 게임 소개](README.md) · [Online guide / 온라인 안내](ONLINE_GUIDE.md)
 
-These controls describe the current v0.1.8 build. F12 opens the in-game guide in the selected language.
+These controls describe the current v0.1.11 build. F12 opens the in-game guide in the selected language.
 
-현재0.1.8 기준 안내입니다. 게임 안에서 F12를 누르면 선택한 언어로 전체 안내를 볼 수 있습니다.
+현재0.1.11 기준 안내입니다. 게임 안에서 F12를 누르면 선택한 언어로 전체 안내를 볼 수 있습니다.
 
 ## Cards and choices / 카드와 선택
 
@@ -34,7 +34,7 @@ Inspection never plays an Event or reveals a Ministry by itself. During Ministry
 | + / − | Zoom in / out / 확대·축소 |
 | F1 / F2 / F3 / F4 | Europe / North America / Caribbean / India / 유럽·북아메리카·카리브해·인도 |
 | F9 | Expand / restore the map / 지도 크게 보기·복귀 |
-| A / S / D | Rewards / Navy and Advantages / log tab / 보상·해군 및 이점·기록 탭 |
+| A / S / D | Rewards / War & Advantages / log tab / 보상·전쟁 및 이점·기록 탭 |
 | G | Active effects, token locations and durations / 진행 중인 효과·토큰 위치·유지 기간 |
 | Z / X / C | Major / Minor / next available Event point pool / 주요·보조·다음 사용 가능한 이벤트 점수 |
 | Ctrl+Z | Undo when eligible; request consent online / 가능한 행동 되돌리기, 온라인은 상대 동의 요청 |

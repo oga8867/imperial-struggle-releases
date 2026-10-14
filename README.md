@@ -6,7 +6,7 @@ GMT Games의 보드게임 제국의 투쟁을 Windows에서 플레이할 수 있
 
 [Download the latest game / 최신 게임 다운로드](https://github.com/oga8867/imperial-struggle-releases/releases/latest) · [English introduction](#english) · [한국어 소개](#korean) · [Online guide / 온라인 안내](ONLINE_GUIDE.md) · [Keyboard controls / 단축키](KEYBOARD_CONTROLS.md)
 
-Current public build: v0.1.8, Windows x64 test build. 현재 공개 배포: v0.1.8, Windows 64비트 테스트 버전.
+Current public build: v0.1.11, Windows x64 test build. 현재 공개 배포: v0.1.11, Windows 64비트 테스트 버전.
 
 ## Downloads / 다운로드
 
@@ -16,8 +16,8 @@ Open the release page and expand Assets. Download one of the two game packages b
 
 | Package / 파일 | Use / 용도 |
 | --- | --- |
-| [ImperialStruggle-0.1.8-Windows-x64-Setup.exe](https://github.com/oga8867/imperial-struggle-releases/releases/download/v0.1.8/ImperialStruggle-0.1.8-Windows-x64-Setup.exe) | Install and launch from the Start menu / 설치한 뒤 시작 메뉴에서 실행 |
-| [ImperialStruggle-0.1.8-Windows-x64-Portable.zip](https://github.com/oga8867/imperial-struggle-releases/releases/download/v0.1.8/ImperialStruggle-0.1.8-Windows-x64-Portable.zip) | Extract the whole folder and run ImperialStruggle.exe / 전체 압축을 풀고 ImperialStruggle.exe 실행 |
+| [ImperialStruggle-0.1.11-Windows-x64-Setup.exe](https://github.com/oga8867/imperial-struggle-releases/releases/download/v0.1.11/ImperialStruggle-0.1.11-Windows-x64-Setup.exe) | Install and launch from the Start menu / 설치한 뒤 시작 메뉴에서 실행 |
+| [ImperialStruggle-0.1.11-Windows-x64-Portable.zip](https://github.com/oga8867/imperial-struggle-releases/releases/download/v0.1.11/ImperialStruggle-0.1.11-Windows-x64-Portable.zip) | Extract the whole folder and run ImperialStruggle.exe / 전체 압축을 풀고 ImperialStruggle.exe 실행 |
 
 Each version has only these two download assets. SHA-256 checksums are listed in the release description; build and verification records are retained locally. For connection instructions, see the [online guide](ONLINE_GUIDE.md).
 
@@ -58,14 +58,14 @@ The build targets 64-bit Windows 10/11 with OpenGL 3.3 graphics. The bundled Not
 
 ![English gameplay and AI action observer](images/ai-sidebar-en-actions.png)
 
-Gameplay capture from v0.1.7; these interface features are also included in v0.1.8.
+Gameplay capture from v0.1.7; these interface features are also included in v0.1.11.
 
 | Area | Information and controls |
 | --- | --- |
 | Top dashboard | Both sides' Debt, available borrowing, Treaty Points, total Squadrons and hand size; the central VP track and current Turn/Action Round. Squadron totals distinguish the Navy Box from unbuilt supply. |
 | Main map | Drag to pan and scroll to zoom. Zoom out to 75%, restore 100% with the backtick key, or expand the map with F9. Region buttons and F1–F4 move to the four regions. |
 | Rewards | Global Demand commodities, Regional Awards and European Prestige. Each row shows the leading side, its margin and whether the required margin is met. Click for the detailed comparison. |
-| Navy / Advantages | Navy Box squadrons, owned Advantages, each side's recent Action Round usage out of two, and full effect/availability explanations. Map Advantage tokens open the same detail view. |
+| War & Advantages | Navy Box squadrons, owned Advantages, each side's recent Action Round usage out of two, and full effect/availability explanations. Map Advantage tokens open the same detail view. |
 | Bottom cards | Your Ministries, their keywords and your Event Cards. Inspect full effects, choose eligible reveals/abilities, or view revealed opponent Ministries with F11. |
 | Right action panel | Remaining Investment Tiles, separate Major/Minor/Event action-point pools, legal actions and the AI observer. |
 
@@ -153,14 +153,14 @@ Windows10/11 64비트와 OpenGL3.3 그래픽을 기준으로 제작했습니다.
 
 ![한국어 게임 화면과 오른쪽 AI 행동 관찰](images/ai-sidebar-ko-actions.png)
 
-0.1.7의 실제 게임 화면입니다. 이 배치와 기능은 최신0.1.8에도 포함됩니다.
+0.1.7의 실제 게임 화면입니다. 이 배치와 기능은 최신0.1.11에도 포함됩니다.
 
 | 위치 | 확인할 정보와 조작 |
 | --- | --- |
 | 상단 | 양측 채무·추가 차입 가능량·조약점수·함대 총수·손패 수, 가운데 승점 트랙과 현재 턴/라운드. 함대는 해군 상자 대기와 미건조 공급을 구분합니다. |
 | 중앙 지도 | 드래그로 이동하고 휠로 확대/축소합니다.75%까지 축소하며 백틱 키로100% 초기화, F9로 크게 보기, F1–F4로 지역 이동을 합니다. |
 | 보상 탭 | 세계 수요 자원·지역 승점계산·유럽 위신을 확인합니다. 각 줄 오른쪽에 우세 진영, 차이, 필요한 차이 충족 여부가 보이며 클릭하면 상세 비교를 읽습니다. |
-| 해군·이점 탭 | 대기 함대, 보유 이점, 양측 최근 행동 라운드 사용횟수/2를 봅니다. 지도 이점 토큰을 눌러도 같은 효과·사용 조건 창이 열립니다. |
+| 전쟁·이점 탭 | 대기 함대, 보유 이점, 양측 최근 행동 라운드 사용횟수/2를 봅니다. 지도 이점 토큰을 눌러도 같은 효과·사용 조건 창이 열립니다. |
 | 하단 카드 | 자기 내각 이름·키워드와 이벤트 손패를 봅니다. 전체 효과 보기·합법적인 공개/능력 사용, F11 상대 내각 확인을 제공합니다. |
 | 오른쪽 행동 패널 | 남은 투자 타일, 주요·보조·이벤트 행동점수, 현재 가능한 행동, AI 관찰을 표시합니다. |
 
@@ -236,7 +236,7 @@ The shared VP track starts at 15. French gains move it up; British gains move it
 | --- | --- |
 | 1–9 / QWERT / Enter | Investment details / Event details / confirm · 투자 상세 / 이벤트 상세 / 확정 |
 | Backtick / F1–F4 / F9 | Reset map / regions / expand map · 지도100% 초기화 / 지역 / 크게 보기 |
-| A / S / D | Rewards / Navy and Advantages / log tab · 보상 / 해군·이점 / 기록 탭 |
+| A / S / D | Rewards / War & Advantages / log tab · 보상 / 전쟁·이점 / 기록 탭 |
 | Z / X / C | Major / Minor / next Event point pool · 주요 / 보조 / 다음 이벤트 점수 |
 | Ctrl+S / F5 | Save/Load archive / quick save · 저장 보관함 / 빠른 저장 |
 | F6 / F7 / F8 / F11 | Full log / used cards / own War tiles / opponent Ministries · 큰 기록 / 사용된 카드 / 자기 전쟁 타일 / 상대 내각 |
@@ -249,11 +249,11 @@ The shared VP track starts at 15. French gains move it up; British gains move it
 ## More screens / 다른 화면
 
 <details>
-<summary>Main menus / 메인 메뉴 · v0.1.8</summary>
+<summary>Main menus / 메인 메뉴 · v0.1.11</summary>
 
-![English menu v0.1.8](images/menu-en.jpg)
+![English menu v0.1.11](images/menu-en.jpg)
 
-![한국어 메인 메뉴 v0.1.8](images/menu-ko.jpg)
+![한국어 메인 메뉴 v0.1.11](images/menu-ko.jpg)
 
 </details>
 
@@ -268,13 +268,13 @@ This is an earlier development capture of the effects list included in the lates
 
 ## Versions and verification / 버전과 검증 범위
 
-v0.1.8 is the current downloadable build and adds the main-menu version label. It includes the preceding gameplay, online, save, AI-observation and War-presentation work described above. The latest package's recorded checks cover Korean/English startup and extracted-package consistency. This documentation update does not change the game binaries or version.
+v0.1.11 is the current downloadable build. A profile without a language preference starts in English; settings can switch to Korean and retain that choice. Full card-list details now open above the in-game menu and return to the list, rather than appearing later on game resume. War theater text has clear margins around the corner ornaments, and the sidebar is named War & Advantages. Earlier gameplay, online, saves, AI observation and War presentation are included.
 
-0.1.8은 현재 다운로드 가능한 버전이며 메인 메뉴 버전 표시를 추가했습니다. 앞서 개발한 게임 진행·온라인·저장·AI 관찰·전쟁 연출을 포함합니다. 해당 배포 기록은 한영 시작과 압축 해제 파일 일치 검사를 다룹니다. 이번 설명 보완은 게임 파일이나 버전을 바꾸지 않습니다.
+0.1.11은 현재 다운로드 가능한 버전입니다. 언어 설정이 없는 첫 실행은 영어이며 설정에서 한국어로 바꾸면 다음 실행에도 유지합니다. 게임 중 메뉴의 전체 카드 설명은 목록 위에서 즉시 열리고 닫기/Esc로 돌아옵니다. 게임 복귀 후 상세가 갑자기 나타나던 문제를 고쳤습니다. 전장 설명은 모서리 장식과 겹치지 않게 여백을 확보했고 사이드 탭 이름을 전쟁·이점으로 바꿨습니다. 이전 게임 진행·온라인·저장·AI 관찰·전쟁 연출도 포함합니다.
 
-The release's validation document distinguishes current package checks from earlier gameplay checks. A new test of two different home networks, an exhaustive test of every rule combination, a new installation/uninstallation test and a current AI win-rate study are not claimed for v0.1.8.
+Recorded checks cover bilingual card-menu input (28), all four War viewers and text layout (50), War/review flow (200), packaged KO/EN startup (22) and extracted ZIP startup (11). The same tested game executable and data pack are reused after updating the distribution instructions; ZIP file consistency and extracted startup are checked again. Build/validation records are retained locally, and download hashes appear in the release description. External internet/NAT, installation/uninstallation, all rule combinations and AI win rates were not newly tested for this release.
 
-릴리스의 검증 문서에서 이번 배포 검사와 이전 게임 검사 범위를 구분합니다.0.1.8에서 서로 다른 집의 실제 접속, 모든 규칙 조합, 설치/제거, 현재 AI 승률을 새로 검증했다고 주장하지 않습니다.
+검사 기록은 한영 카드 메뉴 실제 입력28, 네 전쟁 표시판 설명/배치50, 전쟁·결과 흐름200, 배포 한영 시작22, ZIP 추출 시작11을 다룹니다. 안내 수정 후에도 검증한 게임 실행파일/자료는 그대로 유지하고 ZIP 파일 일치·추출 실행을 다시 확인했습니다. 제작·검증 기록은 로컬에 보관하고 다운로드 해시는 릴리스 설명에 적습니다. 외부 인터넷/NAT·설치/제거·모든 규칙 조합·AI 승률을 이번 배포에서 새로 검증한 것은 아닙니다.
 
 Original v0.1.0, v0.1.1 and v0.1.2 release packages are preserved in [All releases](https://github.com/oga8867/imperial-struggle-releases/releases). Those older packages lack later features; use the latest release for online testing. Intermediate local builds were not all published.
 
