@@ -18,9 +18,10 @@ Open the release page and expand Assets. Download one of the two game packages b
 | --- | --- |
 | [ImperialStruggle-0.1.8-Windows-x64-Setup.exe](https://github.com/oga8867/imperial-struggle-releases/releases/download/v0.1.8/ImperialStruggle-0.1.8-Windows-x64-Setup.exe) | Install and launch from the Start menu / 설치한 뒤 시작 메뉴에서 실행 |
 | [ImperialStruggle-0.1.8-Windows-x64-Portable.zip](https://github.com/oga8867/imperial-struggle-releases/releases/download/v0.1.8/ImperialStruggle-0.1.8-Windows-x64-Portable.zip) | Extract the whole folder and run ImperialStruggle.exe / 전체 압축을 풀고 ImperialStruggle.exe 실행 |
-| SHA256SUMS.txt | Compare downloaded file hashes / 다운로드한 파일의 해시 확인 |
-| VALIDATION_KO_EN.txt, build-manifest.json | Build-specific verification scope and package information / 해당 배포의 검증 범위와 제작 정보 |
-| ONLINE_TEST_GUIDE_KO_EN.txt | A guide to send with the game / 상대에게 게임과 함께 전달할 접속 안내 |
+
+Each version has only these two download assets. SHA-256 checksums are listed in the release description; build and verification records are retained locally. For connection instructions, see the [online guide](ONLINE_GUIDE.md).
+
+버전별 다운로드 첨부는 위 두 종류만 제공합니다. SHA-256은 릴리스 설명에서 확인하고 제작·검증 기록은 로컬에 보관합니다. 접속 방법은 [온라인 안내](ONLINE_GUIDE.md)를 확인하세요.
 
 The GitHub-generated “Source code (zip/tar.gz)” files contain this repository's documentation, not the playable game. GitHub가 자동으로 제공하는 “Source code” ZIP/TAR에는 안내 자료가 들어 있습니다. 게임은 Setup.exe 또는 Portable.zip을 받으세요.
 
