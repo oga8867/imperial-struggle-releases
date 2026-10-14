@@ -4,7 +4,7 @@
 
 ## English
 
-Both players should install or extract the same release. Check the version in the main menu footer.
+Both players should install or extract the same release (current: v0.1.13). Check the version in the main menu footer.
 
 1. The host opens Online, chooses a side and creates a room. Leave the port at 38567 and try automatic port mapping (UPnP).
 2. Wait for the UPnP result. For players in different homes, the invitation must contain the host's public IPv4 address.
@@ -19,7 +19,7 @@ F6 opens the play log; its folder button opens dated TXT/JSONL records. For a fa
 
 ## 한국어
 
-두 사람 모두 같은 버전을 설치하거나 압축 해제합니다. 메인 메뉴 하단에서 버전을 확인하세요.
+두 사람 모두 같은 버전(현재 v0.1.13)을 설치하거나 압축 해제합니다. 메인 메뉴 하단에서 버전을 확인하세요.
 
 1. 방장이 온라인 메뉴에서 진영을 고르고 방을 만듭니다. 포트38567을 유지하고 자동 포트 열기(UPnP)를 시도합니다.
 2. 자동 설정 결과를 기다립니다. 서로 다른 집에서는 초대 주소에 방장 공인 IPv4 주소가 들어가야 합니다.
@@ -94,3 +94,10 @@ The host advances shared stages such as the end-of-War report; each required gam
 References: [Godot hosting considerations](https://docs.godotengine.org/en/stable/tutorials/networking/high_level_multiplayer.html#hosting-considerations) and [UPnP documentation](https://docs.godotengine.org/en/stable/classes/class_upnp.html). These explain the network mechanisms; actual external connectivity still depends on the players' networks.
 
 접속 원리는 [Godot 네트워크 안내](https://docs.godotengine.org/en/stable/tutorials/networking/high_level_multiplayer.html#hosting-considerations)와 [UPnP 설명](https://docs.godotengine.org/en/stable/classes/class_upnp.html)을 참고하세요. 실제 외부 접속은 양측 네트워크 환경에 따라 확인해야 합니다.
+
+
+## Cancel an unconfirmed effect / 대상 확정 전 효과 취소
+
+Eligible Events and Advantages can be cancelled before their first actual target choice. Online, request cancellation and wait for the opponent's approval. A decline leaves the pending effect in place. Confirmation, newly drawn hidden information or a Ministry reveal can close this cancellation window. Public Event reveals and cancellations remain in the log.
+
+가능한 이벤트·이점은 첫 실제 대상 확정 전에 사용 취소를 요청할 수 있습니다. 온라인에서는 상대가 승인해야 복원하며 거절하면 진행 중인 효과를 계속 처리합니다. 선택 확정·새 비공개 정보·내각 공개 뒤에는 취소할 수 없을 수 있습니다. 공개된 이벤트와 취소 사실은 기록에 남습니다.

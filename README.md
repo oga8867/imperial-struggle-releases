@@ -6,7 +6,7 @@ GMT Games의 보드게임 제국의 투쟁을 Windows에서 플레이할 수 있
 
 [Download the latest game / 최신 게임 다운로드](https://github.com/oga8867/imperial-struggle-releases/releases/latest) · [English introduction](#english) · [한국어 소개](#korean) · [Online guide / 온라인 안내](ONLINE_GUIDE.md) · [Keyboard controls / 단축키](KEYBOARD_CONTROLS.md)
 
-Current public build: v0.1.11, Windows x64 test build. 현재 공개 배포: v0.1.11, Windows 64비트 테스트 버전.
+Current public build: v0.1.13, Windows x64 test build. 현재 공개 배포: v0.1.13, Windows 64비트 테스트 버전.
 
 ## Downloads / 다운로드
 
@@ -16,8 +16,8 @@ Open the release page and expand Assets. Download one of the two game packages b
 
 | Package / 파일 | Use / 용도 |
 | --- | --- |
-| [ImperialStruggle-0.1.11-Windows-x64-Setup.exe](https://github.com/oga8867/imperial-struggle-releases/releases/download/v0.1.11/ImperialStruggle-0.1.11-Windows-x64-Setup.exe) | Install and launch from the Start menu / 설치한 뒤 시작 메뉴에서 실행 |
-| [ImperialStruggle-0.1.11-Windows-x64-Portable.zip](https://github.com/oga8867/imperial-struggle-releases/releases/download/v0.1.11/ImperialStruggle-0.1.11-Windows-x64-Portable.zip) | Extract the whole folder and run ImperialStruggle.exe / 전체 압축을 풀고 ImperialStruggle.exe 실행 |
+| [ImperialStruggle-0.1.13-Windows-x64-Setup.exe](https://github.com/oga8867/imperial-struggle-releases/releases/download/v0.1.13/ImperialStruggle-0.1.13-Windows-x64-Setup.exe) | Install and launch from the Start menu / 설치한 뒤 시작 메뉴에서 실행 |
+| [ImperialStruggle-0.1.13-Windows-x64-Portable.zip](https://github.com/oga8867/imperial-struggle-releases/releases/download/v0.1.13/ImperialStruggle-0.1.13-Windows-x64-Portable.zip) | Extract the whole folder and run ImperialStruggle.exe / 전체 압축을 풀고 ImperialStruggle.exe 실행 |
 
 Each version has only these two download assets. SHA-256 checksums are listed in the release description; build and verification records are retained locally. For connection instructions, see the [online guide](ONLINE_GUIDE.md).
 
@@ -58,7 +58,7 @@ The build targets 64-bit Windows 10/11 with OpenGL 3.3 graphics. The bundled Not
 
 ![English gameplay and AI action observer](images/ai-sidebar-en-actions.png)
 
-Gameplay capture from v0.1.7; these interface features are also included in v0.1.11.
+Gameplay capture from v0.1.7; these interface features are also included in v0.1.13.
 
 | Area | Information and controls |
 | --- | --- |
@@ -77,6 +77,7 @@ Space tooltips explain the printed cost, the current action's actual cost and th
 - Card-retention, discard and Ministry-selection screens offer full effect inspection while preserving your selections. Minimize supported choices to inspect the board; newly dealt Investment Tiles are visible during Event retention.
 - Ministries remain private until legally revealed. You can choose whether to reveal for an eligible effect, or reveal during your own Action Round. Opponent inspection shows revealed faces and unrevealed backs/counts.
 - Advantage details explain why use is unavailable, including acquisition this Action Round, an exhausted effect, the usage limit, conflicts or missing connections. Use at most two per Action Round and one per Region; resolve one and then use another if it remains legal.
+- Before the first actual target choice is confirmed, eligible Events and Advantages offer Cancel. The activation state is restored; an Event's public reveal and cancellation remain in the log. A confirmed choice, new hidden information or a Ministry reveal can prevent cancellation. Online cancellation requires opponent consent.
 - Unused discount Advantages can offer a return to the point before activation when the undo rules permit it. Undo can restore an earlier eligible Major Action together with subsequent Minor Actions; newly learned cards/tiles and Ministry reveals form information barriers. Online undo needs opponent consent.
 - Map and War choices distinguish selecting a candidate from confirming it. Required decisions remain pending while you inspect a card, map or log.
 
@@ -98,7 +99,7 @@ War presentation capture from an earlier development build; the latest build inc
 
 Basic AI ranks legal candidates using its evaluation. Strategic AI tests candidate sequences in isolated simulations using the game's rules, considers the current Action Round and a short opponent response, and samples possible hidden information. It receives its own private information and public information, rather than the opponent's actual hidden cards or tile identities.
 
-Its evaluation considers scoring margins, useful markets and access, Advantage completion/denial, discounts, borrowing and war preparation. Ministry selection uses card preferences, your hand's bonus keywords and, for Strategic AI, combinations plus some current passive value. Ministry selection is separate from the 10–30 second Action Round search.
+Its evaluation considers scoring margins, useful markets and access, Advantage completion/denial, discounts, borrowing and war preparation. It adapts priorities for Baltic Trade, Cardinal diplomacy, Swift denial and war readiness, considering both legal Major/Minor placement and scarce Investments the opponent might need. Lower odd Major values and diplomacy receive a modest situational preference. Every Action Round evaluates net Regional Awards, Global Demand and European Prestige, with greater urgency in the final Action Round of a Peace Turn. Optional conflict effects may be skipped when their legal targets only harm the AI. Ministry selection uses card preferences, your hand's bonus keywords and, for Strategic AI, combinations plus some current passive value. Ministry selection is separate from the 10–30 second Action Round search.
 
 The AI observer is on by default with a 3-second delay per action. Set 1–5 seconds or turn it off. It shows the selected Investment, used public cards, affected spaces and before/after changes in the right sidebar. Automatic map movement can also be disabled. P pauses/resumes, N shows the next action and K skips the current Action Round's presentation delay. Skipping the presentation still executes the game actions.
 
@@ -153,7 +154,7 @@ Windows10/11 64비트와 OpenGL3.3 그래픽을 기준으로 제작했습니다.
 
 ![한국어 게임 화면과 오른쪽 AI 행동 관찰](images/ai-sidebar-ko-actions.png)
 
-0.1.7의 실제 게임 화면입니다. 이 배치와 기능은 최신0.1.11에도 포함됩니다.
+0.1.7의 실제 게임 화면입니다. 이 배치와 기능은 최신0.1.13에도 포함됩니다.
 
 | 위치 | 확인할 정보와 조작 |
 | --- | --- |
@@ -172,6 +173,7 @@ Windows10/11 64비트와 OpenGL3.3 그래픽을 기준으로 제작했습니다.
 - 남길 카드·버릴 카드·내각 선택에서도 전체 효과를 볼 수 있고 선택 상태가 유지됩니다. 최소화가 제공되는 창은 지도를 확인한 뒤 돌아옵니다. 남길 이벤트 선택 중 최소화하면 새로 배분된 투자 타일도 확인할 수 있습니다.
 - 내각은 합법적으로 공개하기 전까지 비공개입니다. 효과를 사용할 수 있는 기회에 공개 여부를 고르거나 자기 행동 라운드에 미리 공개합니다. 상대 내각은 공개된 앞면과 미공개 뒷면·개수만 보여 줍니다.
 - 이점 사용이 막히면 사용 버튼과 설명에서 이번 라운드 획득·소진·사용 한도·분쟁·연결 부족 등 이유를 읽습니다. 행동 라운드당 최대2개·지역당1개이며 이점 하나를 처리한 뒤 조건이 맞으면 다음 이점을 사용합니다.
+- 첫 실제 대상 확정 전에는 가능한 이벤트·이점 사용을 취소할 수 있습니다. 사용 직전 상태를 복원하고 이벤트 공개·취소 이력은 남깁니다. 선택 확정·새 비공개 정보·내각 공개 뒤에는 취소가 막힐 수 있으며 온라인은 상대 동의가 필요합니다.
 - 미사용 할인은 허용되는 경우 사용 전으로 되돌릴 수 있습니다. 되돌리기 목록에서 주요행동 전을 고르면 이후 보조행동도 함께 취소합니다. 새 카드/전쟁 타일을 확인하거나 내각을 공개한 이전으로는 돌아갈 수 없으며 온라인에서는 상대 동의가 필요합니다.
 - 지도와 전쟁의 대상은 후보를 고른 뒤 확정합니다. 지도·카드·기록을 확인하는 동안 필수 선택은 그대로 남습니다.
 
@@ -189,7 +191,7 @@ Windows10/11 64비트와 OpenGL3.3 그래픽을 기준으로 제작했습니다.
 
 기본 AI는 가능한 행동을 평가해 고릅니다. 전략 AI는 게임 규칙을 사용하는 독립 시뮬레이션에서 현재 라운드의 행동과 상대의 짧은 응수를 비교합니다. 자기 비공개 정보와 공개 정보로 판단하고 상대의 실제 숨은 패·타일 정체를 읽지 않도록 구성했습니다.
 
-평가에는 득점 차이, 시장과 접근권, 이점 완성/차단, 할인, 차입과 전쟁 준비가 들어갑니다. 내각은 고정 선호와 자기 손패의 보너스 키워드를 고려하며 전략 AI는 카드 조합과 일부 현재 지속 효과 가치도 비교합니다. 내각 선택은10~30초 라운드 탐색과 별개입니다.
+평가에는 득점 차이, 시장과 접근권, 이점 완성/차단, 할인, 차입과 전쟁 준비가 들어갑니다. 발트해 무역·추기경 외교망·스위프트 견제·전쟁 준비의 우선순위를 판에 맞춰 바꾸며, 실제 주요/보조 배치와 상대에게 필요한 투자 타일 선점도 비교합니다. 낮은 홀수 주요 점수·외교 우선은 작은 상황별 가중치입니다. 모든 행동 라운드에서 지역·세계 수요·유럽 위신의 순 보상을 평가하고 평화 턴의 마지막 행동 라운드에는 득점 긴급성을 높입니다. 선택적인 분쟁 효과가 자기에게만 손해라면 포기를 고려합니다. 내각은 고정 선호와 자기 손패의 보너스 키워드를 고려하며 전략 AI는 카드 조합과 일부 현재 지속 효과 가치도 비교합니다. 내각 선택은10~30초 라운드 탐색과 별개입니다.
 
 행동 관찰은 기본 켜짐·행동당3초입니다. 옵션에서1~5초를 고르거나 끌 수 있습니다. 투자 선택, 공개된 사용 카드, 대상 지역, 깃발·토큰의 변경 전후를 오른쪽에서 보여 줍니다. 지도 자동 이동도 끌 수 있습니다. P는 정지/재개, N은 다음 행동, K는 이번 라운드 연출 넘기기입니다. 넘겨도 실제 행동은 정상 처리합니다.
 
@@ -268,13 +270,15 @@ This is an earlier development capture of the effects list included in the lates
 
 ## Versions and verification / 버전과 검증 범위
 
-v0.1.11 is the current downloadable build. A profile without a language preference starts in English; settings can switch to Korean and retain that choice. Full card-list details now open above the in-game menu and return to the list, rather than appearing later on game resume. War theater text has clear margins around the corner ornaments, and the sidebar is named War & Advantages. Earlier gameplay, online, saves, AI observation and War presentation are included.
+v0.1.13 includes the unpublished v0.1.12 improvements. It adds adaptive Investment/placement priorities, per-round scoring and denial, optional conflict skipping, safe pre-choice effect cancellation, Ministry availability reasons and clearer explanations for all 26 Ministries. Fur Trade and Fisheries can refresh remaining Huguenots once per own Action Round; it does not create new markers. European Naval Prestige now includes Biscay and the Balearic Islands alongside already-counted Minorca. Waiting squadrons in the Navy Box do not count. Jacobite markers sit above Ireland; other persistent tokens avoid space and Advantage click areas. First launch remains English, with English/Korean settings saved.
 
-0.1.11은 현재 다운로드 가능한 버전입니다. 언어 설정이 없는 첫 실행은 영어이며 설정에서 한국어로 바꾸면 다음 실행에도 유지합니다. 게임 중 메뉴의 전체 카드 설명은 목록 위에서 즉시 열리고 닫기/Esc로 돌아옵니다. 게임 복귀 후 상세가 갑자기 나타나던 문제를 고쳤습니다. 전장 설명은 모서리 장식과 겹치지 않게 여백을 확보했고 사이드 탭 이름을 전쟁·이점으로 바꿨습니다. 이전 게임 진행·온라인·저장·AI 관찰·전쟁 연출도 포함합니다.
+0.1.13은 미공개 개발판0.1.12의 개선도 포함합니다. 투자·배치 우선순위와 매 라운드 득점/견제 평가, 선택적 분쟁 포기, 대상 확정 전 효과 취소, 내각 사용 불가 이유와26장 전체의 자세한 설명을 추가했습니다. 북미 무역 내각은 남아 있는 위그노를 자기 행동 라운드마다1회 다시 사용할 수 있게 하며 새 마커를 만들지는 않습니다. 유럽 위신에는 비스케이·발레아레스 함대 칸을 포함하고 이미 반영되던 미노르카도 유지합니다. 해군 상자 대기 함대는 제외합니다. 자코바이트는 아일랜드 위쪽에 두고 다른 지속 토큰도 공간·이점 클릭 영역을 피합니다. 첫 실행 영어와 한영 설정 저장을 유지합니다.
 
-Recorded checks cover bilingual card-menu input (28), all four War viewers and text layout (50), War/review flow (200), packaged KO/EN startup (22) and extracted ZIP startup (11). The same tested game executable and data pack are reused after updating the distribution instructions; ZIP file consistency and extracted startup are checked again. Build/validation records are retained locally, and download hashes appear in the release description. External internet/NAT, installation/uninstallation, all rule combinations and AI win rates were not newly tested for this release.
+![v0.1.13 persistent marker layout / 지속 마커 배치](images/marker-layout-ko-0.1.13.png)
 
-검사 기록은 한영 카드 메뉴 실제 입력28, 네 전쟁 표시판 설명/배치50, 전쟁·결과 흐름200, 배포 한영 시작22, ZIP 추출 시작11을 다룹니다. 안내 수정 후에도 검증한 게임 실행파일/자료는 그대로 유지하고 ZIP 파일 일치·추출 실행을 다시 확인했습니다. 제작·검증 기록은 로컬에 보관하고 다운로드 해시는 릴리스 설명에 적습니다. 외부 인터넷/NAT·설치/제거·모든 규칙 조합·AI 승률을 이번 배포에서 새로 검증한 것은 아닙니다.
+Recorded checks cover 430 packaged rule/UI/AI cases, ten checks using actual host/guest processes, and eleven extracted-ZIP startup/font/AI-worker/save checks. The same tested executable and data pack are retained while the distribution instructions are updated for public release; the final ZIP is checked again. Both bundled fonts support all 11,172 modern Hangul syllables and Latin text. Build records stay local and hashes appear in the release description. Expert-player win rates, external internet/NAT and installation/uninstallation were not measured for this release.
+
+검증은 배포본 규칙/UI/AI430사례, 실제 방장/참가자 프로세스10검사, ZIP 추출·시작·글꼴·AI 작업·저장11검사를 포함합니다. 공개 안내를 수정하면서 검증한 실행파일/자료는 유지하고 최종 ZIP을 다시 검사했습니다. 동봉된 두 글꼴의 현대 한글11172자와 라틴 문자를 확인했습니다. 제작 기록은 로컬에 보존하고 해시는 릴리스 설명에 적습니다. 숙련자 상대 승률·외부 인터넷/NAT·설치/제거는 이번 배포에서 측정하지 않았습니다.
 
 Original v0.1.0, v0.1.1 and v0.1.2 release packages are preserved in [All releases](https://github.com/oga8867/imperial-struggle-releases/releases). Those older packages lack later features; use the latest release for online testing. Intermediate local builds were not all published.
 
