@@ -4,7 +4,7 @@
 
 ## English
 
-Both players should install or extract the same release (current: v0.1.13). Check the version in the main menu footer.
+Both players should install or extract the same release (current: v0.1.14). Check the version in the main menu footer.
 
 1. The host opens Online, chooses a side and creates a room. Leave the port at 38567 and try automatic port mapping (UPnP).
 2. Wait for the UPnP result. For players in different homes, the invitation must contain the host's public IPv4 address.
@@ -19,7 +19,7 @@ F6 opens the play log; its folder button opens dated TXT/JSONL records. For a fa
 
 ## 한국어
 
-두 사람 모두 같은 버전(현재 v0.1.13)을 설치하거나 압축 해제합니다. 메인 메뉴 하단에서 버전을 확인하세요.
+두 사람 모두 같은 버전(현재 v0.1.14)을 설치하거나 압축 해제합니다. 메인 메뉴 하단에서 버전을 확인하세요.
 
 1. 방장이 온라인 메뉴에서 진영을 고르고 방을 만듭니다. 포트38567을 유지하고 자동 포트 열기(UPnP)를 시도합니다.
 2. 자동 설정 결과를 기다립니다. 서로 다른 집에서는 초대 주소에 방장 공인 IPv4 주소가 들어가야 합니다.
