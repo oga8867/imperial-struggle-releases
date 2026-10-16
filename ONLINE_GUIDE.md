@@ -4,7 +4,7 @@
 
 ## English
 
-Both players should install or extract the same release (current: v0.1.21). Check the version in the main menu footer.
+Both players should install or extract the same release (current: v0.1.22). Check the version in the main menu footer.
 
 1. The host opens Online, chooses a side and creates a room. Leave the port at 38567 and try automatic port mapping (UPnP).
 2. Wait for the UPnP result. For players in different homes, the invitation must contain the host's public IPv4 address.
@@ -19,7 +19,7 @@ F6 opens the play log; its folder button opens dated TXT/JSONL records. For a fa
 
 ## 한국어
 
-두 사람 모두 같은 버전(현재 v0.1.21)을 설치하거나 압축 해제합니다. 메인 메뉴 하단에서 버전을 확인하세요.
+두 사람 모두 같은 버전(현재 v0.1.22)을 설치하거나 압축 해제합니다. 메인 메뉴 하단에서 버전을 확인하세요.
 
 1. 방장이 온라인 메뉴에서 진영을 고르고 방을 만듭니다. 포트38567을 유지하고 자동 포트 열기(UPnP)를 시도합니다.
 2. 자동 설정 결과를 기다립니다. 서로 다른 집에서는 초대 주소에 방장 공인 IPv4 주소가 들어가야 합니다.
@@ -104,6 +104,13 @@ Eligible Events and Advantages can be cancelled before their first actual target
 
 ## New game balance / 새 게임 밸런스
 
-Before hosting a new match, use New Game Settings for the Spanish Empire option and −5..+5 starting TRP. Negative grants Britain; positive grants France; zero grants neither. The room shares this configuration and a resumed match preserves the remaining TRP. Both players use v0.1.21.
+Before hosting a new match, use New Game Settings for the Spanish Empire option and −5..+5 starting TRP. Negative grants Britain; positive grants France; zero grants neither. The room shares this configuration and a resumed match preserves the remaining TRP. Both players use v0.1.22.
 
-새 온라인 판의 방장은 새 게임 설정에서 스페인 제국과 시작 TRP −5~+5를 정합니다. 음수는 영국, 양수는 프랑스,0은 추가없음입니다. 방 설정을 공유하고 재개시 남은 TRP를 유지합니다. 두 사람 모두0.1.21을 사용하세요.
+새 온라인 판의 방장은 새 게임 설정에서 스페인 제국과 시작 TRP −5~+5를 정합니다. 음수는 영국, 양수는 프랑스,0은 추가없음입니다. 방 설정을 공유하고 재개시 남은 TRP를 유지합니다. 두 사람 모두0.1.22을 사용하세요.
+
+
+## 0.1.22 saved-game correction / 저장판 교정
+
+Both players should update to0.1.22. Loading an older save corrects Chesapeake to a Market without a commodity. It does not replay earlier scoring or change flag ownership.
+
+두 사람 모두0.1.22로 업데이트하세요. 옛 저장을 불러오면 체서피크의 자원만 교정하며 지난 승점이나 깃발 소유는 다시 계산하지 않습니다.

@@ -6,7 +6,17 @@ GMT Games의 보드게임 제국의 투쟁을 Windows에서 플레이할 수 있
 
 [Download the latest game / 최신 게임 다운로드](https://github.com/oga8867/imperial-struggle-releases/releases/latest) · [English introduction](#english) · [한국어 소개](#korean) · [Online guide / 온라인 안내](ONLINE_GUIDE.md) · [Keyboard controls / 단축키](KEYBOARD_CONTROLS.md)
 
-Current public build: v0.1.21, Windows x64 test build. 현재 공개 배포: v0.1.21, Windows 64비트 테스트 버전.
+Current public build: v0.1.22, Windows x64 test build. 현재 공개 배포: v0.1.22, Windows 64비트 테스트 버전.
+
+## What changed in 0.1.22 / 이번 수정
+
+Chesapeake is a Market without a commodity icon on the printed board. Earlier builds incorrectly counted it as Tobacco, giving its controller one extra Tobacco Market. This release fixes new games and corrects the fixed commodity attribute when loading older saves or receiving game-state copies. Existing ownership and earlier scoring are preserved. Georgia remains a Tobacco Market. Reward details now list counted Markets and those excluded by Conflict, and the dashboard also detects public board changes without an AP-spend notification.
+
+An isolated Market's old flag can be removed at the reduced cost, but flagging the now-empty Market uses its normal current price. Cardinal Ministers now prompts before an eligible first Event/action closes its ability window; returning to play does not reveal or use the Ministry. Round-end reminders show actual leftover AP/TRP and mention expiring AP only when some remain. Original Turn/VP markers, returning Squadron tokens and play-log card previews make changes easier to follow. Admiral Byng's French effect correctly parks a British Squadron until the next Peace Turn.
+
+체서피크는 원작 지도에 자원이 없는 시장인데 이전 버전이 담배로 잘못 계산하여 소유 진영에 담배1개를 더했습니다. 새 판과 옛 저장·상태 사본의 고정 자원을 교정합니다. 기존 소유와 과거 득점은 보존합니다. 조지아는 원래 담배 시장이 맞습니다. 보상 상세에는 실제 집계 시장·분쟁 제외 시장을 표시하며 AP 지출이 없는 공개 지도 변화도 보상창에 반영합니다.
+
+고립 시장의 깃발 제거 할인은 제거 후 빈 시장의 재배치에 적용하지 않습니다. 추기경은 첫 이벤트·행동으로 능력 기회가 닫히기 전에 확인하며 자동 공개·사용하지 않습니다. 종료 알림은 실제 남은 AP·TRP와 실제 소멸분만 설명합니다. 원작 턴·승점 마커, 귀환 예정 함대, 기록 카드의 마우스 미리보기·클릭 전체 설명을 추가했습니다. 빙 제독의 프랑스 효과로 치우는 함대는 영국 함대이며 다음 평화 턴에 돌아옵니다.
 
 ## Downloads / 다운로드
 
@@ -16,8 +26,8 @@ Open the release page and expand Assets. Download one of the two game packages b
 
 | Package / 파일 | Use / 용도 |
 | --- | --- |
-| [ImperialStruggle-0.1.21-Windows-x64-Setup.exe](https://github.com/oga8867/imperial-struggle-releases/releases/download/v0.1.21/ImperialStruggle-0.1.21-Windows-x64-Setup.exe) | Install and launch from the Start menu / 설치한 뒤 시작 메뉴에서 실행 |
-| [ImperialStruggle-0.1.21-Windows-x64-Portable.zip](https://github.com/oga8867/imperial-struggle-releases/releases/download/v0.1.21/ImperialStruggle-0.1.21-Windows-x64-Portable.zip) | Extract the whole folder and run ImperialStruggle.exe / 전체 압축을 풀고 ImperialStruggle.exe 실행 |
+| [ImperialStruggle-0.1.22-Windows-x64-Setup.exe](https://github.com/oga8867/imperial-struggle-releases/releases/download/v0.1.22/ImperialStruggle-0.1.22-Windows-x64-Setup.exe) | Install and launch from the Start menu / 설치한 뒤 시작 메뉴에서 실행 |
+| [ImperialStruggle-0.1.22-Windows-x64-Portable.zip](https://github.com/oga8867/imperial-struggle-releases/releases/download/v0.1.22/ImperialStruggle-0.1.22-Windows-x64-Portable.zip) | Extract the whole folder and run ImperialStruggle.exe / 전체 압축을 풀고 ImperialStruggle.exe 실행 |
 
 Each version has only these two download assets. SHA-256 checksums are listed in the release description; build and verification records are retained locally. For connection instructions, see the [online guide](ONLINE_GUIDE.md).
 
@@ -58,7 +68,7 @@ The build targets 64-bit Windows 10/11 with OpenGL 3.3 graphics. The bundled Not
 
 ![English gameplay and AI action observer](images/ai-sidebar-en-actions.png)
 
-Gameplay capture from v0.1.7; these interface features are also included in v0.1.21.
+Gameplay capture from v0.1.7; these interface features are also included in v0.1.22.
 
 | Area | Information and controls |
 | --- | --- |
@@ -294,13 +304,13 @@ This is an earlier development capture of the effects list included in the lates
 
 ## Versions and verification / 버전과 검증 범위
 
-v0.1.21 includes the unpublished v0.1.15–0.1.20 improvements: eligible Investment undo, round-end warnings, all-difficulty round-result comparison, Quick's 10-second search, starting TRP, card-catalog filters/navigation, 60/120-second strategic search and Ministry reminders. It also improves La Gabelle map inspection and USA flag presentation. Earlier War, protection, language, save and online features remain.
+v0.1.22 includes the unpublished v0.1.15–0.1.20 improvements: eligible Investment undo, round-end warnings, all-difficulty round-result comparison, Quick's 10-second search, starting TRP, card-catalog filters/navigation, 60/120-second strategic search and Ministry reminders. It also improves La Gabelle map inspection and USA flag presentation. Earlier War, protection, language, save and online features remain.
 
-0.1.21은 미공개0.1.15~0.1.20의 투자 선택 되돌리기·종료 경고·모든 난이도 라운드 결과 비교·빠른10초 탐색·시작TRP·카드 필터/방향키·전략60/120초·내각 알림을 포함하며 라 가벨 지도 확인과 미국 깃발 표시를 개선합니다. 기존 전쟁·보호·언어·저장·온라인 기능도 유지합니다.
+0.1.22은 미공개0.1.15~0.1.20의 투자 선택 되돌리기·종료 경고·모든 난이도 라운드 결과 비교·빠른10초 탐색·시작TRP·카드 필터/방향키·전략60/120초·내각 알림을 포함하며 라 가벨 지도 확인과 미국 깃발 표시를 개선합니다. 기존 전쟁·보호·언어·저장·온라인 기능도 유지합니다.
 
-The final v0.1.21 EXE/PCK passed 584 focused rule/UI/AI/save/player-view checks and 11 extracted-ZIP checks (595 total). The unchanged AI/Ministry implementation was also exercised in v0.1.20's separately recorded 600 checks, including actual workers and same-position 30/60/120-second comparisons. Each count belongs to its recorded build. Both fonts cover all 11,172 modern Hangul syllables and Latin. Only public instructions are repackaged for publication; the final ZIP is checked again.
+The final v0.1.22 EXE/PCK passed 584 focused rule/UI/AI/save/player-view checks and 11 extracted-ZIP checks (595 total). The unchanged AI/Ministry implementation was also exercised in v0.1.20's separately recorded 600 checks, including actual workers and same-position 30/60/120-second comparisons. Each count belongs to its recorded build. Both fonts cover all 11,172 modern Hangul syllables and Latin. Only public instructions are repackaged for publication; the final ZIP is checked again.
 
-최종0.1.21은 규칙/UI/AI/저장/전송사본584개와 ZIP 추출11개로595개를 통과했습니다. 동일한 AI·내각 구현은0.1.20에서 실제 작업 프로세스와 같은 판30/60/120초 비교를 포함한 별도600검사를 완료했습니다. 각 수치는 해당 빌드의 검증 기록입니다. 두 글꼴의 한글11172자·라틴 지원을 확인했고 공개 안내만 재포장한 최종 ZIP을 다시 검사합니다.
+최종0.1.22은 규칙/UI/AI/저장/전송사본584개와 ZIP 추출11개로595개를 통과했습니다. 동일한 AI·내각 구현은0.1.20에서 실제 작업 프로세스와 같은 판30/60/120초 비교를 포함한 별도600검사를 완료했습니다. 각 수치는 해당 빌드의 검증 기록입니다. 두 글꼴의 한글11172자·라틴 지원을 확인했고 공개 안내만 재포장한 최종 ZIP을 다시 검사합니다.
 
 These checks do not establish expert-opponent win rates. Cross-house internet/NAT and live installation/uninstallation were not newly tested. Personal saves/logs and all earlier public releases are preserved. SHA-256 checksums are in each release description.
 
