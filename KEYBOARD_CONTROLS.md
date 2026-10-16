@@ -71,3 +71,9 @@ Online full-match saving belongs to the host. A shortcut does not bypass turn, p
 Skipping presentation does not omit game actions or mandatory choices. These keys also work with an expanded map; separate inspection dialogs protect their own input. Text fields keep normal typing/editing, so entering a name or address does not trigger letter/number game shortcuts.
 
 연출을 넘겨도 실제 행동과 필수 선택은 생략하지 않습니다. 큰 지도에서도 이 키를 사용할 수 있고 별도 상세 창은 그 창의 입력을 보호합니다. 이름·주소 입력 중에는 글자/숫자 게임 단축키가 실행되지 않아 정상적으로 입력·편집할 수 있습니다.
+
+## Card catalog / 카드 목록
+
+In catalog details, Left/Right or Previous/Next moves within the filtered results. The end buttons are disabled rather than wrapping. Era, Event Major Action/bonus conditions and Ministry keywords can be filtered before opening details. This navigation does not apply an Event or reveal a Ministry.
+
+카드 목록 상세에서 좌우키·이전/다음은 현재 필터 결과 안에서 이동하며 양끝에서 멈춥니다. 시대·이벤트 주요행동/보너스 조건·내각 속성을 필터링할 수 있습니다. 탐색은 이벤트 사용이나 내각 공개를 실행하지 않습니다.

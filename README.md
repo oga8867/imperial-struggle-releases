@@ -6,7 +6,7 @@ GMT Games의 보드게임 제국의 투쟁을 Windows에서 플레이할 수 있
 
 [Download the latest game / 최신 게임 다운로드](https://github.com/oga8867/imperial-struggle-releases/releases/latest) · [English introduction](#english) · [한국어 소개](#korean) · [Online guide / 온라인 안내](ONLINE_GUIDE.md) · [Keyboard controls / 단축키](KEYBOARD_CONTROLS.md)
 
-Current public build: v0.1.14, Windows x64 test build. 현재 공개 배포: v0.1.14, Windows 64비트 테스트 버전.
+Current public build: v0.1.21, Windows x64 test build. 현재 공개 배포: v0.1.21, Windows 64비트 테스트 버전.
 
 ## Downloads / 다운로드
 
@@ -16,8 +16,8 @@ Open the release page and expand Assets. Download one of the two game packages b
 
 | Package / 파일 | Use / 용도 |
 | --- | --- |
-| [ImperialStruggle-0.1.14-Windows-x64-Setup.exe](https://github.com/oga8867/imperial-struggle-releases/releases/download/v0.1.14/ImperialStruggle-0.1.14-Windows-x64-Setup.exe) | Install and launch from the Start menu / 설치한 뒤 시작 메뉴에서 실행 |
-| [ImperialStruggle-0.1.14-Windows-x64-Portable.zip](https://github.com/oga8867/imperial-struggle-releases/releases/download/v0.1.14/ImperialStruggle-0.1.14-Windows-x64-Portable.zip) | Extract the whole folder and run ImperialStruggle.exe / 전체 압축을 풀고 ImperialStruggle.exe 실행 |
+| [ImperialStruggle-0.1.21-Windows-x64-Setup.exe](https://github.com/oga8867/imperial-struggle-releases/releases/download/v0.1.21/ImperialStruggle-0.1.21-Windows-x64-Setup.exe) | Install and launch from the Start menu / 설치한 뒤 시작 메뉴에서 실행 |
+| [ImperialStruggle-0.1.21-Windows-x64-Portable.zip](https://github.com/oga8867/imperial-struggle-releases/releases/download/v0.1.21/ImperialStruggle-0.1.21-Windows-x64-Portable.zip) | Extract the whole folder and run ImperialStruggle.exe / 전체 압축을 풀고 ImperialStruggle.exe 실행 |
 
 Each version has only these two download assets. SHA-256 checksums are listed in the release description; build and verification records are retained locally. For connection instructions, see the [online guide](ONLINE_GUIDE.md).
 
@@ -39,16 +39,16 @@ This adaptation manages the rules state, legal choices, scoring, hidden informat
 
 | Mode | How it works |
 | --- | --- |
-| Solo as Britain or France | Choose Easy, Normal (default) or Hard, independently of Basic/Strategic thinking. Strategic AI offers 10, 20 or 30 seconds per Action Round; the default budget is 20 seconds. |
+| Solo as Britain or France | Choose Easy, Normal (default) or Hard, independently of Basic/Strategic thinking. Quick thinking searches for at least 10 seconds. Strategic AI offers 10/20/30/60/120-second Action Round budgets, with 60 seconds as the new-profile default. |
 | Local two-player | Both players use one computer, with a handoff screen for private information. |
 | Online two-player | The room creator's PC hosts the match. Connect by IP/port or an invitation code. The host must keep the game running. |
 
-The optional Spanish Empire rule (§12.1) can be selected before a new game and is off by default. It adds the specified Spanish neutral Market flags and the opponent's Spanish Political-space choice after eligible conquests.
+New Game Settings groups the optional Spanish Empire rule (§12.1, off by default) with a starting Treaty Point slider from −5 to +5: negative grants Britain up to 5 TRP, positive grants France up to 5 TRP, and zero grants neither. It is applied once to a new game, shared online and preserved on resume. A side-bidding system is not included yet. The Spanish option adds the specified Spanish neutral Market flags and the opponent's Spanish Political-space choice after eligible conquests.
 
 ### Install and start
 
 1. Choose Setup.exe or Portable.zip above. For the ZIP, extract everything rather than running the EXE inside the archive. Keep the PCK and accompanying files with the executable.
-2. Launch the game, select English or Korean in settings and choose a play mode.
+2. First launch defaults to English. Select English or Korean in Settings; the choice persists. Choose a play mode.
 3. Read the dealt Event Cards before choosing Ministries. A card's detail view shows its full effects and bonus conditions.
 4. In online play, have both players check the version at the bottom of the main menu. Use the same release.
 
@@ -58,7 +58,7 @@ The build targets 64-bit Windows 10/11 with OpenGL 3.3 graphics. The bundled Not
 
 ![English gameplay and AI action observer](images/ai-sidebar-en-actions.png)
 
-Gameplay capture from v0.1.7; these interface features are also included in v0.1.14.
+Gameplay capture from v0.1.7; these interface features are also included in v0.1.21.
 
 | Area | Information and controls |
 | --- | --- |
@@ -73,6 +73,12 @@ Space tooltips explain the printed cost, the current action's actual cost and th
 
 ### Cards, Advantages and choices
 
+The card catalog filters Events by era, Major Action requirement and each bonus keyword or special condition. Ministries filter by era and keyword. In catalog details, Previous/Next and Left/Right follow the current filtered results and stop at the ends. These are read-only inspections.
+
+Before ending a round, review any unspent point pools and Advantages usable now. On your last own Action Round of each Peace Turn, the warning also lists end-of-turn/scoring Ministries and reveal status. It never reveals them automatically. Using a Ministry with a Minor Action asks for confirmation because extra points do not permit a second Minor expenditure. Investment selection can be undone while no new hidden information or other information barrier has intervened; online undo still needs consent.
+
+La Gabelle and other card-effect selections can minimize to inspect the map and return from the bottom dock without losing the pending selection.
+
 - Investment Tile keys 1–9 and Event Card keys QWERT open details first. Enter confirms an available choice or use; inspecting a card does not play it.
 - Card-retention, discard and Ministry-selection screens offer full effect inspection while preserving your selections. Minimize supported choices to inspect the board; newly dealt Investment Tiles are visible during Event retention.
 - Ministries remain private until legally revealed. You can choose whether to reveal for an eligible effect, or reveal during your own Action Round. Opponent inspection shows revealed faces and unrevealed backs/counts.
@@ -82,6 +88,8 @@ Space tooltips explain the printed cost, the current action's actual cost and th
 - Map and War choices distinguish selecting a candidate from confirming it. Required decisions remain pending while you inspect a card, map or log.
 
 ### Peace Turns and Wars
+
+After the American War of Independence, USA/Canada rewards place permanent USA flags as allowed by the rules; Canada is not a separate faction. Both sides may Shift the two USA Prestige spaces in Peace Turn 6 if at least one USA flag exists. USA control now uses the original flag artwork. The current reward-to-Turn-6 path was checked; the older reported failure was not reproduced.
 
 The game has six Peace Turns and four intervening Wars. The first War occurs after Peace Turn 1. The complete sequence is shown [below](#turn-sequence).
 
@@ -99,19 +107,17 @@ Byng placement uses the original War Display: inspect the eligible Theater and s
 
 ### AI: difficulty, thinking and watching
 
-Easy, Normal (default) and Hard are saved in Settings and game saves, independently of thinking time. Hard gives stronger priority to European foundations, then North America; large imminent rewards or preventing an automatic loss can justify Caribbean/Indian play. Strategic search considers up to 0/1/3 opponent responses for Easy/Normal/Hard under the same time budget.
+Difficulty and thinking time are separate settings. The Normal and Hard labels have been exchanged following player feedback; existing saves retain their underlying strategy. Normal now uses the previous Europe/North America-focused profile, while Hard uses the former Normal profile. These names are not a measured win-rate ranking. Rules, draws and resource grants remain the same.
 
-Basic AI ranks legal candidates using its evaluation. Strategic AI tests candidate sequences in isolated simulations using the game's rules, considers the current Action Round and a short opponent response, and samples possible hidden information. It receives its own private information and public information, rather than the opponent's actual hidden cards or tile identities.
+Quick thinking completes at least 10 seconds of actual search before executing its plan, unless interrupted or recovering from a worker failure. Strategic AI uses a maximum 10/20/30/60/120 seconds for the whole Action Round, with 60 seconds as the new-profile default. Important drafts, imminent scoring and War preparation receive more time and wider candidate/reply searches. A forced single choice can be handled quickly. Worker startup and action presentation take additional time; the setting is not a delay per action.
 
-Its evaluation considers scoring margins, useful markets and access, Advantage completion/denial, discounts, borrowing and war preparation. It adapts priorities for Baltic Trade, Cardinal diplomacy, Swift denial and war readiness, considering both legal Major/Minor placement and scarce Investments the opponent might need. Lower odd Major values and diplomacy receive a modest situational preference. Every Action Round evaluates net Regional Awards, Global Demand and European Prestige, with greater urgency in the final Action Round of a Peace Turn. Optional conflict effects may be skipped when their legal targets only harm the AI. While the Succession-era cards are legally selectable, Ministry selection prioritizes Jonathan Swift + Edmond Halley for Britain and Cardinal Ministers + John Law for France. Era, retention and Jacobite restrictions still apply. Other selections use preferences, hand keywords and some passive value. Ministry selection is separate from the 10–30 second Action Round search.
+All difficulties compare the expected end of their Action Round with its starting position. They evaluate scoring/denial, market access, discounts, investment efficiency, war preparation and opposing Advantages that are still usable. Plans continue while known observations match and can be reconsidered after new information using the remaining budget. Simulations use the game's legal commands and sampled possible hidden information, not the opponent's actual private hand or future draw order.
 
-The AI observer is on by default with a 3-second delay per action. Set 1–5 seconds or turn it off. It shows the selected Investment, used public cards, affected spaces and before/after changes in the right sidebar. Automatic map movement can also be disabled. P pauses/resumes, N shows the next action and K skips the current Action Round's presentation delay. Skipping the presentation still executes the game actions.
+When legally selectable, the Succession-era Ministry preference is Jonathan Swift + Edmond Halley for Britain and Cardinal Ministers + John Law for France. Era, retention and Jacobite restrictions remain. Other selections use preferences, hand keywords and some passive value; Ministry selection is separate from the Action Round search.
 
-War presentation has its own on/off and 1–5 second settings, with a 3-second default and the same pause/next/skip controls. Online players use their own presentation settings and can review independently; required game decisions still belong to the appropriate player.
+The AI observer defaults to on with 3 seconds per action; choose 1–5 seconds or off. The right panel shows Investment selection, public cards, affected spaces and before/after changes. Automatic map movement can be disabled. P pauses/resumes, N advances and K skips the current round's presentation. War presentation has separate local settings and the same controls; online players inspect results independently. Skipping presentation never skips required game decisions.
 
-Current AI limitations: its weights are heuristic, Ministry planning does not model every ability's long-term value, and war preparation does not fully price every Theater's exact reward threshold or special effect. Cutting an opponent's only market-access route is also not comprehensively valued. More thinking time explores the existing evaluation more deeply; it does not remove those limitations. Optimal play, expert-level strength and the current version's win rate have not been established.
-
-Squadron movement compares the loss at the origin, benefit at the destination and MP cost together. Optional conflict targeting distinguishes opponent, own and neutral Spanish Markets; useless neutral placements are filtered when meaningful legal targets exist. Card evaluation also considers usable restricted points, Halley's exchange cost, forced borrowing and optional demand scoring that could reward the opponent.
+Evaluation remains heuristic and does not comprehensively model every long-term Ministry effect, Theater threshold or access-denial plan. Longer thinking can compare more alternatives but does not guarantee optimal play or improved expert-opponent win rates.
 
 ### Save, load and follow the match
 
@@ -141,11 +147,11 @@ If automatic mapping fails, forward UDP 38567 to the host PC's local IPv4 addres
 
 | 방식 | 설명 |
 | --- | --- |
-| 혼자 영국/프랑스 | 쉬움·보통(기본)·어려움을 기본/전략 AI와 별도로 선택합니다. 전략 AI는 행동 라운드당10·20·30초 계산 한도를 고르며 기본값은20초입니다. |
+| 혼자 영국/프랑스 | 쉬움·보통(기본)·어려움을 기본/전략 AI와 별도로 선택합니다. 빠른 판단은 최소10초 탐색하고 전략 AI는 행동 라운드당10·20·30·60·120초 상한을 고릅니다. 새 프로필 기본값은60초입니다. |
 | 한 컴퓨터 2인 | 두 사람이 같은 PC를 사용합니다. 차례 인계 화면으로 비공개 정보를 가립니다. |
 | 온라인 2인 | 방장 PC가 게임 서버가 됩니다. IP/포트나 초대 코드로 접속하며 대국 중 방장 PC와 게임을 계속 켜 둡니다. |
 
-새 판을 만들 때 §12.1 스페인 제국 선택 규칙을 켤 수 있습니다. 기본값은 꺼짐입니다. 켜면 지정된 스페인 시장에 중립 깃발을 놓고, 해당 스페인 영토 정복 후 상대의 스페인 정치 칸 전환 선택을 처리합니다.
+새 게임 설정에서 §12.1 스페인 제국 규칙(기본 꺼짐)과 시작 TRP −5~+5 슬라이더를 조절합니다. 음수는 영국, 양수는 프랑스에 최대5점 추가하며0은 추가없음입니다. 새 판에 한 번 지급하고 온라인·저장 재개에도 유지합니다. 진영 입찰 진행은 아직 포함되지 않습니다. 스페인 규칙을 켜면 지정된 스페인 시장에 중립 깃발을 놓고, 해당 스페인 영토 정복 후 상대의 스페인 정치 칸 전환 선택을 처리합니다.
 
 ### 설치하고 첫 판 시작하기
 
@@ -175,6 +181,12 @@ Windows10/11 64비트와 OpenGL3.3 그래픽을 기준으로 제작했습니다.
 
 ### 카드·이점·선택 화면
 
+카드 목록은 이벤트의 시대·주요행동조건·개별 보너스 키워드/특수조건과 내각의 시대·속성 필터를 제공합니다. 상세의 이전/다음·좌우 방향키는 현재 필터 결과 안에서 이동하며 양끝은 비활성화됩니다. 읽기만으로 카드를 사용하지 않습니다.
+
+라운드 종료 전에 남은 점수와 지금 사용할 수 있는 이점을 경고합니다. 매 평화 턴 자기 마지막 라운드에는 종료/득점 내각과 공개 상태도 알리며 자동 공개하지 않습니다. 보조행동에 내각을 쓰면 추가 점수가 있어도 한 번만 지출할 수 있어 확인창을 먼저 보여줍니다. 새 비공개 정보나 공개 장벽이 없다면 투자 타일 선택도 되돌릴 수 있고 온라인에서는 상대 동의가 필요합니다.
+
+라 가벨 등 카드 효과 선택은 최소화하여 지도를 보고 하단 버튼으로 같은 선택에 복귀할 수 있습니다.
+
 - 숫자1–9는 투자 타일, QWERT는 손패 이벤트의 상세를 엽니다. 사용할 수 있는 선택은 Enter로 확정합니다. 상세를 읽는 것만으로 카드를 사용하지 않습니다.
 - 남길 카드·버릴 카드·내각 선택에서도 전체 효과를 볼 수 있고 선택 상태가 유지됩니다. 최소화가 제공되는 창은 지도를 확인한 뒤 돌아옵니다. 남길 이벤트 선택 중 최소화하면 새로 배분된 투자 타일도 확인할 수 있습니다.
 - 내각은 합법적으로 공개하기 전까지 비공개입니다. 효과를 사용할 수 있는 기회에 공개 여부를 고르거나 자기 행동 라운드에 미리 공개합니다. 상대 내각은 공개된 앞면과 미공개 뒷면·개수만 보여 줍니다.
@@ -184,6 +196,8 @@ Windows10/11 64비트와 OpenGL3.3 그래픽을 기준으로 제작했습니다.
 - 지도와 전쟁의 대상은 후보를 고른 뒤 확정합니다. 지도·카드·기록을 확인하는 동안 필수 선택은 그대로 남습니다.
 
 ### 평화와 전쟁은 어떻게 진행되나요?
+
+미국 독립전쟁의 USA·Canada 보상은 규칙에 따라 영구 미국 깃발을 놓습니다. 별도 캐나다 진영이 생기지 않습니다. 미국 깃발이 하나 이상 있으면 평화6턴에 양측 모두 미국 위신 두 칸에 외교 전환을 할 수 있습니다. 표시는 원작 성조기를 사용합니다. 현행 보상→6턴 흐름을 확인했으며 보고된 옛 판의 오류는 재현하지 못했습니다.
 
 총6개의 평화 턴 사이에4번의 전쟁이 있습니다. 첫 전쟁은 평화1턴 직후입니다. 전체 순서는 [아래 표](#turn-sequence)를 참고하세요.
 
@@ -197,19 +211,17 @@ Windows10/11 64비트와 OpenGL3.3 그래픽을 기준으로 제작했습니다.
 
 ### AI 설정과 행동 관찰
 
-쉬움·보통(기본)·어려움은 계산 시간과 별도로 선택하고 설정·저장에 유지합니다. 어려움에서 유럽 기반→북미를 더 중시하되 큰 임박 득점이나 자동패배 방지는 카리브해·인도 투자 예외로 둡니다. 전략 탐색은 같은 시간 한도 안에서 쉬움/보통/어려움에 상대 응수를 최대0/1/3개 비교합니다.
+난이도와 계산 시간은 별도로 설정합니다. 플레이 피드백에 따라 보통·어려움 이름을 교환했고 기존 저장의 실제 전략은 유지합니다. 현재 보통은 이전의 유럽·북미 집중 전략이며 어려움은 이전 보통의 전략입니다. 이름 교환이 승률 서열을 입증한다는 뜻은 아닙니다. 규칙·추첨·지급 자원은 같습니다.
 
-기본 AI는 가능한 행동을 평가해 고릅니다. 전략 AI는 게임 규칙을 사용하는 독립 시뮬레이션에서 현재 라운드의 행동과 상대의 짧은 응수를 비교합니다. 자기 비공개 정보와 공개 정보로 판단하고 상대의 실제 숨은 패·타일 정체를 읽지 않도록 구성했습니다.
+빠른 판단은 사용자 중단이나 계산 실패 복구를 제외하고 최소10초 실제 탐색을 완료한 뒤 수순을 실행합니다. 전략 AI는 행동 라운드 전체 최대10·20·30·60·120초를 고르며 새 프로필 기본값은60초입니다. 투자 타일 선점·득점 직전·전쟁 준비에 시간을 집중하고 후보와 상대 응수를 넓힙니다. 한 가지뿐인 필수 선택은 빨리 처리할 수 있습니다. 초기 구동과 행동 연출은 추가 시간이며 행동마다 기다리는 지연 설정과는 다릅니다.
 
-평가에는 득점 차이, 시장과 접근권, 이점 완성/차단, 할인, 차입과 전쟁 준비가 들어갑니다. 발트해 무역·추기경 외교망·스위프트 견제·전쟁 준비의 우선순위를 판에 맞춰 바꾸며, 실제 주요/보조 배치와 상대에게 필요한 투자 타일 선점도 비교합니다. 낮은 홀수 주요 점수·외교 우선은 작은 상황별 가중치입니다. 모든 행동 라운드에서 지역·세계 수요·유럽 위신의 순 보상을 평가하고 평화 턴의 마지막 행동 라운드에는 득점 긴급성을 높입니다. 선택적인 분쟁 효과가 자기에게만 손해라면 포기를 고려합니다. 왕위계승 시대에 합법 선택 가능한 동안 영국은 조너선 스위프트+에드먼드 핼리, 프랑스는 추기경 장관들+존 로를 우선합니다. 시대·공개 내각 유지·자코바이트 제한은 지킵니다. 그 밖의 선택에는 선호·손패 키워드·일부 지속 효과 가치를 사용합니다. 내각 선택은10~30초 라운드 탐색과 별개입니다.
+모든 난이도가 라운드 시작과 예상 종료의 순개선량을 비교합니다. 득점·상대 득점 방해, 시장 접근, 할인, 투자 효율, 전쟁 준비와 미소진 상대 이점의 즉시 위협을 평가합니다. 확인한 정보가 같으면 수순을 이어가고 새 정보 뒤에는 남은 예산으로 재검토할 수 있습니다. 실제 합법 명령과 가능한 비공개 정보 표본으로 계산하며 상대 실제 손패·미래 추첨 순서를 보지 않습니다.
 
-행동 관찰은 기본 켜짐·행동당3초입니다. 옵션에서1~5초를 고르거나 끌 수 있습니다. 투자 선택, 공개된 사용 카드, 대상 지역, 깃발·토큰의 변경 전후를 오른쪽에서 보여 줍니다. 지도 자동 이동도 끌 수 있습니다. P는 정지/재개, N은 다음 행동, K는 이번 라운드 연출 넘기기입니다. 넘겨도 실제 행동은 정상 처리합니다.
+합법 선택 가능한 왕위계승 시대 내각은 영국 스위프트+핼리, 프랑스 추기경 장관들+존 로를 우선합니다. 시대·공개 내각 유지·자코바이트 제한을 지킵니다. 그 밖에는 선호·손패 키워드·일부 지속 효과 가치를 사용하며 내각 선택은 라운드 탐색과 별도입니다.
 
-전쟁 연출도 별도 켜기/끄기·1~5초 설정이며 기본3초입니다. 정지·다음·넘기기를 제공하고 온라인에서도 각자의 설정으로 독립 확인합니다. 실제 필수 선택은 해당 플레이어가 수행합니다.
+AI 행동 관찰은 기본 켜짐·3초이며1~5초 또는 끄기를 고릅니다. 오른쪽에서 투자 선택·공개 카드·대상 지역·변경 전후를 확인하고 지도 자동 이동도 끌 수 있습니다. P 정지/재개·N 다음·K 이번 라운드 연출 넘기기를 사용합니다. 전쟁 연출은 별도 개인 설정이며 온라인에서도 각자 결과를 봅니다. 연출을 넘겨도 필수 게임 선택을 건너뛰지 않습니다.
 
-현재 AI는 경험적인 가중치를 사용합니다. 모든 내각 능력의 장기 가치, 전장별 정확한 보상 기준·특수 효과, 상대의 유일한 시장 접근로를 끊는 가치를 충분히 평가하지 못합니다. 계산 시간을 늘리면 같은 평가를 더 많이 시험할 뿐 이 한계가 자동 해결되지는 않습니다. 최적 플레이·숙련자 수준·현재 버전의 승률을 입증한 상태는 아닙니다.
-
-함대 이동은 출발지 손실·목적지 이익·군사점수 비용을 함께 비교합니다. 선택적 분쟁은 상대·자기·스페인 중립 시장을 구분하며 의미 있는 합법 대상이 있으면 무의미한 중립 배치를 제외합니다. 카드의 제한 점수 실제 사용처, 핼리 교환 비용, 강제 채무와 상대에게 유리한 선택적 세계 수요 계산도 평가합니다.
+평가는 여전히 경험적이며 모든 내각의 장기 가치·전장 보상 기준·접근 차단 계획을 완전하게 모델링하지 않습니다. 긴 계산은 더 많은 대안을 비교하도록 돕지만 최적수나 숙련자 상대 승률 향상을 보장하지 않습니다.
 
 ### 저장·불러오기와 플레이 기록
 
@@ -282,23 +294,19 @@ This is an earlier development capture of the effects list included in the lates
 
 ## Versions and verification / 버전과 검증 범위
 
-v0.1.14 adds time-independent AI difficulty, Hard's Europe/North America priorities, more useful card/Advantage evaluation and fixes for wasteful naval moves and neutral conflict targets. Byng placement provides War Display inspection, explicit confirmation and visible +2 markers. Raised tile overlays leave the original War reward headers visible. The missing direct Gulf of Cazones–Puerto Principe map link is corrected in new games and older saves, including protection, Shift costs, Advantage targeting and AI evaluation. Fixed geography is repaired without rewriting past ownership, debt or VP.
+v0.1.21 includes the unpublished v0.1.15–0.1.20 improvements: eligible Investment undo, round-end warnings, all-difficulty round-result comparison, Quick's 10-second search, starting TRP, card-catalog filters/navigation, 60/120-second strategic search and Ministry reminders. It also improves La Gabelle map inspection and USA flag presentation. Earlier War, protection, language, save and online features remain.
 
-0.1.14는 계산 시간과 독립된 난이도, 어려움의 유럽·북미 집중, 카드·이점 효율 평가, 불필요한 함대 이동·중립 분쟁 개선을 포함합니다. 빙 배치는 전장 확인·명시적 확정과+2 마커를 제공하며 전쟁 타일 상자는 원작 보상 머리글을 가리지 않게 배치했습니다. 카조네스만–푸에르토프린시페 직접 연결 누락을 새 판과 옛 저장에서 고쳐 보호·전환 비용·이점 대상·AI에 반영했습니다. 과거 소유·채무·승점을 바꾸지 않고 고정 지리만 교정합니다.
+0.1.21은 미공개0.1.15~0.1.20의 투자 선택 되돌리기·종료 경고·모든 난이도 라운드 결과 비교·빠른10초 탐색·시작TRP·카드 필터/방향키·전략60/120초·내각 알림을 포함하며 라 가벨 지도 확인과 미국 깃발 표시를 개선합니다. 기존 전쟁·보호·언어·저장·온라인 기능도 유지합니다.
 
-Earlier v0.1.13 improvements remain: per-round scoring/denial, eligible effect cancellation before target confirmation, Ministry explanations, Naval Prestige and persistent-token placement. First launch is English and language settings persist.
+The final v0.1.21 EXE/PCK passed 584 focused rule/UI/AI/save/player-view checks and 11 extracted-ZIP checks (595 total). The unchanged AI/Ministry implementation was also exercised in v0.1.20's separately recorded 600 checks, including actual workers and same-position 30/60/120-second comparisons. Each count belongs to its recorded build. Both fonts cover all 11,172 modern Hangul syllables and Latin. Only public instructions are repackaged for publication; the final ZIP is checked again.
 
-이전0.1.13의 매 라운드 득점/견제, 가능한 효과의 대상 확정 전 취소, 내각 설명·유럽 함대 위신·지속 토큰 배치도 유지합니다. 첫 실행은 영어이며 언어 설정을 저장합니다.
+최종0.1.21은 규칙/UI/AI/저장/전송사본584개와 ZIP 추출11개로595개를 통과했습니다. 동일한 AI·내각 구현은0.1.20에서 실제 작업 프로세스와 같은 판30/60/120초 비교를 포함한 별도600검사를 완료했습니다. 각 수치는 해당 빌드의 검증 기록입니다. 두 글꼴의 한글11172자·라틴 지원을 확인했고 공개 안내만 재포장한 최종 ZIP을 다시 검사합니다.
 
-![v0.1.13 persistent marker layout / 이전0.1.13 지속 마커 배치](images/marker-layout-ko-0.1.13.png)
+These checks do not establish expert-opponent win rates. Cross-house internet/NAT and live installation/uninstallation were not newly tested. Personal saves/logs and all earlier public releases are preserved. SHA-256 checksums are in each release description.
 
-Recorded v0.1.14 checks cover 680 packaged rule/UI/AI cases, 12 checks across four actual AI-worker configurations and 11 extracted-ZIP startup/font/worker/save checks (703 total), plus 125 source checks. Public instructions were repackaged with the same tested EXE/PCK and the final ZIP passed another check. Both bundled fonts cover all 11,172 modern Hangul syllables and Latin text. Checksums are in each release description. These checks do not establish expert-player win rates; cross-house internet/NAT and live installation/uninstallation were not newly tested.
+숙련자 상대 승률, 새 외부 인터넷/NAT 대국, 실제 설치/제거를 이번 검사로 입증하지 않습니다. 개인 저장·로그와 이전 공개 릴리스는 보존하고 SHA-256은 각 릴리스 설명에 제공합니다.
 
-0.1.14 검증은 배포 규칙/UI/AI680사례, 실제 AI 작업 프로세스4조건12검사, ZIP 추출·시작·글꼴·작업·저장11검사로703개이며 소스125검사도 통과했습니다. 공개 안내만 재포장하면서 검증한 EXE/PCK를 유지했고 최종 ZIP 재검사도 통과했습니다. 두 글꼴의 현대 한글11172자·라틴 문자를 확인했습니다. SHA는 각 릴리스 설명에 적습니다. 숙련자 상대 승률을 증명한 것은 아니며 서로 다른 집 인터넷/NAT·실제 설치/제거는 새로 시험하지 않았습니다.
-
-Original v0.1.0, v0.1.1 and v0.1.2 release packages are preserved in [All releases](https://github.com/oga8867/imperial-struggle-releases/releases). Those older packages lack later features; use the latest release for online testing. Intermediate local builds were not all published.
-
-원래0.1.0·0.1.1·0.1.2 배포 파일은 [이전 릴리스](https://github.com/oga8867/imperial-struggle-releases/releases)에 보존했습니다. 이전 파일에는 이후 기능이 없으므로 온라인 테스트에는 최신판을 사용하세요. 모든 중간 개발 버전을 공개 배포한 것은 아닙니다.
+Original v0.1.0, v0.1.1 and v0.1.2 packages and later public releases remain in [All releases](https://github.com/oga8867/imperial-struggle-releases/releases).
 
 ## Repository and credits / 저장소와 출처
 
