@@ -2,9 +2,9 @@
 
 [Game introduction / 게임 소개](README.md) · [Online guide / 온라인 안내](ONLINE_GUIDE.md)
 
-These controls describe the current v0.1.11 build. F12 opens the in-game guide in the selected language.
+These controls describe the current v0.1.37 build. F12 opens the in-game guide in the selected language.
 
-현재0.1.11 기준 안내입니다. 게임 안에서 F12를 누르면 선택한 언어로 전체 안내를 볼 수 있습니다.
+현재0.1.37 기준 안내입니다. 게임 안에서 F12를 누르면 선택한 언어로 전체 안내를 볼 수 있습니다.
 
 ## Cards and choices / 카드와 선택
 
@@ -51,7 +51,7 @@ Drag the map to pan, scroll to zoom and use the relevant map controls while a sp
 | F5 | Quick-save to the last used slot; use a separate quick save if none was selected / 마지막 사용 슬롯에 빠른 저장, 미선택 시 별도 빠른 저장 |
 | F6 | Large play log, including wartime public actions / 큰 플레이 기록, 전쟁 중 공개 행동 포함 |
 | F7 | Used Cards / 사용된 카드 |
-| F8 | Inspect your War tiles / 자기 전쟁 타일 확인 |
+| F8 | Toggle War Display / 전쟁 표시판 열기·닫기 (다시 누르면 닫기) |
 | F10 | Menu / 메뉴 |
 | F11 | Revealed opponent Ministries; unrevealed backs and counts / 상대 공개 내각, 미공개 뒷면·개수 |
 | F12 | Keyboard guide / 단축키 안내 |

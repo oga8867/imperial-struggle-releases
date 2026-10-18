@@ -6,17 +6,25 @@ GMT Games의 보드게임 제국의 투쟁을 Windows에서 플레이할 수 있
 
 [Download the latest game / 최신 게임 다운로드](https://github.com/oga8867/imperial-struggle-releases/releases/latest) · [English introduction](#english) · [한국어 소개](#korean) · [Online guide / 온라인 안내](ONLINE_GUIDE.md) · [Keyboard controls / 단축키](KEYBOARD_CONTROLS.md)
 
-Current public build: v0.1.22, Windows x64 test build. 현재 공개 배포: v0.1.22, Windows 64비트 테스트 버전.
+Current public build: v0.1.37, Windows x64 test build. 현재 공개 배포: v0.1.37, Windows 64비트 테스트 버전.
 
-## What changed in 0.1.22 / 이번 수정
+## What changed in 0.1.37 / 이번 수정
 
-Chesapeake is a Market without a commodity icon on the printed board. Earlier builds incorrectly counted it as Tobacco, giving its controller one extra Tobacco Market. This release fixes new games and corrects the fixed commodity attribute when loading older saves or receiving game-state copies. Existing ownership and earlier scoring are preserved. Georgia remains a Tobacco Market. Reward details now list counted Markets and those excluded by Conflict, and the dashboard also detects public board changes without an AP-spend notification.
+This release brings the current development improvements to the general Windows build. Human-versus-AI, local two-player and host-based online play remain available. AI-versus-AI comparison and internal observer/replay tools are kept in the internal test build.
 
-An isolated Market's old flag can be removed at the reduced cost, but flagging the now-empty Market uses its normal current price. Cardinal Ministers now prompts before an eligible first Event/action closes its ability window; returning to play does not reveal or use the Ministry. Round-end reminders show actual leftover AP/TRP and mention expiring AP only when some remain. Original Turn/VP markers, returning Squadron tokens and play-log card previews make changes easier to follow. Admiral Byng's French effect correctly parks a British Squadron until the next Peace Turn.
+- AI evaluates long-term Ministry foundations, repeatable Advantages, opposing threats, draft opportunities, Squadron efficiency and war preparation. Extra Markets no longer earn an unlimited generic ownership bonus after a region is secured; real commodity, Ministry, access and Advantage gains still matter. These are heuristic improvements, not a measured expert-level win rate.
+- Revealed opposing Ministries show use status for each ability. Halley's two abilities are separate; repeatable abilities retain their reuse rules. Unrevealed Ministries stay hidden.
+- The missing Ohio Forks–Québec & Montreal and San Agustín–Carolinas Conquest Lines are restored, including when loading older saves. Martinique–Antigua economic access is also corrected.
+- Settings now offer windowed, borderless and fullscreen display, saved audio controls and quiet click feedback. Eleven classical tracks play through a shuffled complete bag before repeating. Per-recording credits and licenses are included. Mozart 31 I and Scheherazade III remain pending.
+- Save archives, F8 War Display toggle, card catalog filters/navigation, map inspection, Ministry reminders and turn/war transition handling include the intervening development fixes.
 
-체서피크는 원작 지도에 자원이 없는 시장인데 이전 버전이 담배로 잘못 계산하여 소유 진영에 담배1개를 더했습니다. 새 판과 옛 저장·상태 사본의 고정 자원을 교정합니다. 기존 소유와 과거 득점은 보존합니다. 조지아는 원래 담배 시장이 맞습니다. 보상 상세에는 실제 집계 시장·분쟁 제외 시장을 표시하며 AP 지출이 없는 공개 지도 변화도 보상창에 반영합니다.
+최신 개발 변경을 일반 Windows 배포판에 반영했습니다. 사람이 AI와 하는 대전·한 컴퓨터 2인·방장 서버 온라인은 유지하며, AI끼리 대전·비교와 내부 관전·리플레이 도구는 내부 테스트판에만 둡니다.
 
-고립 시장의 깃발 제거 할인은 제거 후 빈 시장의 재배치에 적용하지 않습니다. 추기경은 첫 이벤트·행동으로 능력 기회가 닫히기 전에 확인하며 자동 공개·사용하지 않습니다. 종료 알림은 실제 남은 AP·TRP와 실제 소멸분만 설명합니다. 원작 턴·승점 마커, 귀환 예정 함대, 기록 카드의 마우스 미리보기·클릭 전체 설명을 추가했습니다. 빙 제독의 프랑스 효과로 치우는 함대는 영국 함대이며 다음 평화 턴에 돌아옵니다.
+- 내각 기반·반복 이점·상대 견제·투자 타일·함대 효율·전쟁 준비를 함께 평가합니다. 이미 확보한 지역에 시장을 추가하는 것만으로 점수가 계속 늘던 평가를 수정하되, 실제 세계 수요·내각·접근권·이점의 이익은 유지합니다. 숙련자 상대 승률이 입증된 것은 아닙니다.
+- 상대 공개 내각에 능력별 이번 평화 턴 사용 여부를 표시합니다. 핼리의 두 능력은 따로 표시하고 반복 능력과 미공개 정보 규칙도 유지합니다.
+- 오하이오 포크–퀘벡·몬트리올과 산아구스틴–캐롤라이나 정복선을 보완하고 옛 저장에도 적용합니다. 마르티니크–앤티가 경제 접근도 수정했습니다.
+- 창·전체 창·전체화면과 저장되는 소리 설정, 작은 클릭음, 클래식 11곡을 제공합니다. 모든 곡을 소진한 뒤 다시 섞으며 음원별 출처·라이선스를 동봉합니다. 모차르트31번1악장·세헤라자데3악장은 보류입니다.
+- 저장 보관함·F8 전쟁 표시판 토글·카드 필터/방향키·지도 확인·내각 알림·턴/전쟁 전환의 누적 개선도 포함합니다.
 
 ## Downloads / 다운로드
 
@@ -26,8 +34,8 @@ Open the release page and expand Assets. Download one of the two game packages b
 
 | Package / 파일 | Use / 용도 |
 | --- | --- |
-| [ImperialStruggle-0.1.22-Windows-x64-Setup.exe](https://github.com/oga8867/imperial-struggle-releases/releases/download/v0.1.22/ImperialStruggle-0.1.22-Windows-x64-Setup.exe) | Install and launch from the Start menu / 설치한 뒤 시작 메뉴에서 실행 |
-| [ImperialStruggle-0.1.22-Windows-x64-Portable.zip](https://github.com/oga8867/imperial-struggle-releases/releases/download/v0.1.22/ImperialStruggle-0.1.22-Windows-x64-Portable.zip) | Extract the whole folder and run ImperialStruggle.exe / 전체 압축을 풀고 ImperialStruggle.exe 실행 |
+| [ImperialStruggle-0.1.37-Windows-x64-Setup.exe](https://github.com/oga8867/imperial-struggle-releases/releases/download/v0.1.37/ImperialStruggle-0.1.37-Windows-x64-Setup.exe) | Install and launch from the Start menu / 설치한 뒤 시작 메뉴에서 실행 |
+| [ImperialStruggle-0.1.37-Windows-x64-Portable.zip](https://github.com/oga8867/imperial-struggle-releases/releases/download/v0.1.37/ImperialStruggle-0.1.37-Windows-x64-Portable.zip) | Extract the whole folder and run ImperialStruggle.exe / 전체 압축을 풀고 ImperialStruggle.exe 실행 |
 
 Each version has only these two download assets. SHA-256 checksums are listed in the release description; build and verification records are retained locally. For connection instructions, see the [online guide](ONLINE_GUIDE.md).
 
@@ -68,7 +76,7 @@ The build targets 64-bit Windows 10/11 with OpenGL 3.3 graphics. The bundled Not
 
 ![English gameplay and AI action observer](images/ai-sidebar-en-actions.png)
 
-Gameplay capture from v0.1.7; these interface features are also included in v0.1.22.
+Gameplay capture from v0.1.7; these interface features are also included in v0.1.37.
 
 | Area | Information and controls |
 | --- | --- |
@@ -96,6 +104,8 @@ La Gabelle and other card-effect selections can minimize to inspect the map and 
 - Before the first actual target choice is confirmed, eligible Events and Advantages offer Cancel. The activation state is restored; an Event's public reveal and cancellation remain in the log. A confirmed choice, new hidden information or a Ministry reveal can prevent cancellation. Online cancellation requires opponent consent.
 - Unused discount Advantages can offer a return to the point before activation when the undo rules permit it. Undo can restore an earlier eligible Major Action together with subsequent Minor Actions; newly learned cards/tiles and Ministry reveals form information barriers. Online undo needs opponent consent.
 - Map and War choices distinguish selecting a candidate from confirming it. Required decisions remain pending while you inspect a card, map or log.
+
+![Public Ministry ability use / 공개 내각 능력별 사용 표시](docs/images/opponent-ministry-usage.png)
 
 ### Peace Turns and Wars
 
@@ -128,6 +138,10 @@ When legally selectable, the Succession-era Ministry preference is Jonathan Swif
 The AI observer defaults to on with 3 seconds per action; choose 1–5 seconds or off. The right panel shows Investment selection, public cards, affected spaces and before/after changes. Automatic map movement can be disabled. P pauses/resumes, N advances and K skips the current round's presentation. War presentation has separate local settings and the same controls; online players inspect results independently. Skipping presentation never skips required game decisions.
 
 Evaluation remains heuristic and does not comprehensively model every long-term Ministry effect, Theater threshold or access-denial plan. Longer thinking can compare more alternatives but does not guarantee optimal play or improved expert-opponent win rates.
+
+### Display and music
+
+Settings offers windowed, borderless and fullscreen display, saved music/click volume and mute controls, and recording credits. The 11-track shuffle does not repeat until all tracks have played; tense tracks are preferred at Round 4 and during War after the current track ends.
 
 ### Save, load and follow the match
 
@@ -233,6 +247,10 @@ AI 행동 관찰은 기본 켜짐·3초이며1~5초 또는 끄기를 고릅니�
 
 평가는 여전히 경험적이며 모든 내각의 장기 가치·전장 보상 기준·접근 차단 계획을 완전하게 모델링하지 않습니다. 긴 계산은 더 많은 대안을 비교하도록 돕지만 최적수나 숙련자 상대 승률 향상을 보장하지 않습니다.
 
+### 화면·소리
+
+설정에서 창·전체 창·전체화면, 음악·클릭 음량과 음소거를 조절합니다. 11곡 전체를 소진한 뒤 다시 섞고 4라운드·전쟁에는 현재 곡이 끝난 뒤 남은 긴장곡을 우선합니다. 설정은 재시작해도 유지되며 음악 출처를 확인할 수 있습니다.
+
 ### 저장·불러오기와 플레이 기록
 
 Ctrl+S는 저장·불러오기 보관함입니다. 이름을 붙여 제한 없이 새 슬롯을 만들고 저장 날짜·버전·방식·턴/단계·행동 진영·승점을 확인합니다. 이름 변경·확인 후 덮어쓰기·선택한 판 불러오기를 제공합니다. F5는 마지막 사용 슬롯에 빠른 저장하며 슬롯을 선택하기 전에는 별도 빠른 저장을 사용합니다. 온라인 전체 판은 방장이 저장하고 재접속 자료는 별도 관리합니다.
@@ -275,7 +293,7 @@ The shared VP track starts at 15. French gains move it up; British gains move it
 | A / S / D | Rewards / War & Advantages / log tab · 보상 / 전쟁·이점 / 기록 탭 |
 | Z / X / C | Major / Minor / next Event point pool · 주요 / 보조 / 다음 이벤트 점수 |
 | Ctrl+S / F5 | Save/Load archive / quick save · 저장 보관함 / 빠른 저장 |
-| F6 / F7 / F8 / F11 | Full log / used cards / own War tiles / opponent Ministries · 큰 기록 / 사용된 카드 / 자기 전쟁 타일 / 상대 내각 |
+| F6 / F7 / F8 / F11 | Full log / used cards / War Display toggle / opponent Ministries · 큰 기록 / 사용된 카드 / 전쟁 표시판 열기·닫기 / 상대 내각 |
 | G / F10 / F12 | Active effects / menu / keyboard guide · 진행 중인 효과 / 메뉴 / 단축키 안내 |
 | P / N / K | Pause / next / skip presentation · 연출 정지 / 다음 / 넘기기 |
 | Ctrl+Z | Eligible undo; online consent · 가능한 되돌리기, 온라인 상대 동의 |
@@ -304,17 +322,12 @@ This is an earlier development capture of the effects list included in the lates
 
 ## Versions and verification / 버전과 검증 범위
 
-v0.1.22 includes the unpublished v0.1.15–0.1.20 improvements: eligible Investment undo, round-end warnings, all-difficulty round-result comparison, Quick's 10-second search, starting TRP, card-catalog filters/navigation, 60/120-second strategic search and Ministry reminders. It also improves La Gabelle map inspection and USA flag presentation. Earlier War, protection, language, save and online features remain.
+The general export is checked separately from the internal build: menu/feature gates, actual AI worker, saves, Hangul fonts, public Ministry usage, Market evaluation, map connections, recording credits and package contents. Detailed counts and SHA-256 values are in the version's release notes. Internal AI-comparison launchers and private saves/logs are not distributed.
 
-0.1.22은 미공개0.1.15~0.1.20의 투자 선택 되돌리기·종료 경고·모든 난이도 라운드 결과 비교·빠른10초 탐색·시작TRP·카드 필터/방향키·전략60/120초·내각 알림을 포함하며 라 가벨 지도 확인과 미국 깃발 표시를 개선합니다. 기존 전쟁·보호·언어·저장·온라인 기능도 유지합니다.
+일반판의 메뉴·내부 기능 차단·실제 AI 계산·저장·한글 글꼴·공개 내각 사용 표시·시장 평가·지도 연결·음원 고지·배포 구성을 별도로 확인합니다. 검사 수와 SHA-256은 해당 버전의 릴리스 설명에 기록합니다. 내부 AI 비교 실행기와 개인 저장·로그는 배포하지 않습니다.
 
-The final v0.1.22 EXE/PCK passed 584 focused rule/UI/AI/save/player-view checks and 11 extracted-ZIP checks (595 total). The unchanged AI/Ministry implementation was also exercised in v0.1.20's separately recorded 600 checks, including actual workers and same-position 30/60/120-second comparisons. Each count belongs to its recorded build. Both fonts cover all 11,172 modern Hangul syllables and Latin. Only public instructions are repackaged for publication; the final ZIP is checked again.
-
-최종0.1.22은 규칙/UI/AI/저장/전송사본584개와 ZIP 추출11개로595개를 통과했습니다. 동일한 AI·내각 구현은0.1.20에서 실제 작업 프로세스와 같은 판30/60/120초 비교를 포함한 별도600검사를 완료했습니다. 각 수치는 해당 빌드의 검증 기록입니다. 두 글꼴의 한글11172자·라틴 지원을 확인했고 공개 안내만 재포장한 최종 ZIP을 다시 검사합니다.
-
-These checks do not establish expert-opponent win rates. Cross-house internet/NAT and live installation/uninstallation were not newly tested. Personal saves/logs and all earlier public releases are preserved. SHA-256 checksums are in each release description.
-
-숙련자 상대 승률, 새 외부 인터넷/NAT 대국, 실제 설치/제거를 이번 검사로 입증하지 않습니다. 개인 저장·로그와 이전 공개 릴리스는 보존하고 SHA-256은 각 릴리스 설명에 제공합니다.
+These checks do not establish expert-opponent win rates or newly verify cross-house internet/NAT play. Earlier public releases and personal data are preserved.
+숙련자 상대 승률이나 새 외부 인터넷/NAT 대국을 이번 검사로 입증하지 않습니다. 이전 공개 릴리스와 개인 데이터는 보존합니다.
 
 Original v0.1.0, v0.1.1 and v0.1.2 packages and later public releases remain in [All releases](https://github.com/oga8867/imperial-struggle-releases/releases).
 
