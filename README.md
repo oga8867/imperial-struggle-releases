@@ -6,7 +6,7 @@ GMT Games의 보드게임 제국의 투쟁을 Windows에서 플레이할 수 있
 
 [Download the latest game / 최신 게임 다운로드](https://github.com/oga8867/imperial-struggle-releases/releases/latest) · [English introduction](#english) · [한국어 소개](#korean) · [Online guide / 온라인 안내](ONLINE_GUIDE.md) · [Keyboard controls / 단축키](KEYBOARD_CONTROLS.md)
 
-Current public build: v0.1.37, Windows x64 test build. 현재 공개 배포: v0.1.37, Windows 64비트 테스트 버전.
+Current public release: [v0.1.37](https://github.com/oga8867/imperial-struggle-releases/releases/tag/v0.1.37), Windows x64 general build. 현재 공개 일반판은 [v0.1.37](https://github.com/oga8867/imperial-struggle-releases/releases/tag/v0.1.37)입니다.
 
 ## What changed in 0.1.37 / 이번 수정
 
@@ -76,7 +76,7 @@ The build targets 64-bit Windows 10/11 with OpenGL 3.3 graphics. The bundled Not
 
 ![English gameplay and AI action observer](images/ai-sidebar-en-actions.png)
 
-Gameplay capture from v0.1.7; these interface features are also included in v0.1.37.
+Reference gameplay screenshot from v0.1.7. The current v0.1.37 layout has since changed; see the release notes above for current improvements.
 
 | Area | Information and controls |
 | --- | --- |
@@ -127,13 +127,13 @@ Byng placement uses the original War Display: inspect the eligible Theater and s
 
 ### AI: difficulty, thinking and watching
 
-Difficulty and thinking time are separate settings. The Normal and Hard labels have been exchanged following player feedback; existing saves retain their underlying strategy. Normal now uses the previous Europe/North America-focused profile, while Hard uses the former Normal profile. These names are not a measured win-rate ranking. Rules, draws and resource grants remain the same.
+Choose Easy, Normal (default) or Hard separately from the thinking mode and time budget. Difficulty changes candidate/reply search breadth and strategic emphasis; it does not change the rules, draws or resource grants. Every difficulty includes the current Market-overinvestment correction. These labels are not an expert-opponent win-rate measurement.
 
 Quick thinking completes at least 10 seconds of actual search before executing its plan, unless interrupted or recovering from a worker failure. Strategic AI uses a maximum 10/20/30/60/120 seconds for the whole Action Round, with 60 seconds as the new-profile default. Important drafts, imminent scoring and War preparation receive more time and wider candidate/reply searches. A forced single choice can be handled quickly. Worker startup and action presentation take additional time; the setting is not a delay per action.
 
 All difficulties compare the expected end of their Action Round with its starting position. They evaluate scoring/denial, market access, discounts, investment efficiency, war preparation and opposing Advantages that are still usable. Plans continue while known observations match and can be reconsidered after new information using the remaining budget. Simulations use the game's legal commands and sampled possible hidden information, not the opponent's actual private hand or future draw order.
 
-When legally selectable, the Succession-era Ministry preference is Jonathan Swift + Edmond Halley for Britain and Cardinal Ministers + John Law for France. Era, retention and Jacobite restrictions remain. Other selections use preferences, hand keywords and some passive value; Ministry selection is separate from the Action Round search.
+When legally selectable, the Succession-era Ministry preference is Jonathan Swift + Edmond Halley for Britain and Cardinal Ministers + John Law for France. Era, retention and Jacobite restrictions remain. Other Ministry choices use their conditions, remaining usable opportunities, board foundations and hand keyword synergy. Ministry selection is separate from the Action Round search.
 
 The AI observer defaults to on with 3 seconds per action; choose 1–5 seconds or off. The right panel shows Investment selection, public cards, affected spaces and before/after changes. Automatic map movement can be disabled. P pauses/resumes, N advances and K skips the current round's presentation. War presentation has separate local settings and the same controls; online players inspect results independently. Skipping presentation never skips required game decisions.
 
@@ -190,7 +190,7 @@ Windows10/11 64비트와 OpenGL3.3 그래픽을 기준으로 제작했습니다.
 
 ![한국어 게임 화면과 오른쪽 AI 행동 관찰](images/ai-sidebar-ko-actions.png)
 
-0.1.7의 실제 게임 화면입니다. 이 배치와 기능은 최신0.1.14에도 포함됩니다.
+이 이미지는 v0.1.7의 이전 게임 화면입니다. 현재 공개판은 v0.1.37이며 화면 배치가 달라질 수 있습니다. 최신 변경은 위의 릴리스 안내를 확인하세요.
 
 | 위치 | 확인할 정보와 조작 |
 | --- | --- |
@@ -235,13 +235,13 @@ Windows10/11 64비트와 OpenGL3.3 그래픽을 기준으로 제작했습니다.
 
 ### AI 설정과 행동 관찰
 
-난이도와 계산 시간은 별도로 설정합니다. 플레이 피드백에 따라 보통·어려움 이름을 교환했고 기존 저장의 실제 전략은 유지합니다. 현재 보통은 이전의 유럽·북미 집중 전략이며 어려움은 이전 보통의 전략입니다. 이름 교환이 승률 서열을 입증한다는 뜻은 아닙니다. 규칙·추첨·지급 자원은 같습니다.
+쉬움·보통(기본)·어려움은 판단 방식·계산 시간과 별도로 설정합니다. 난이도에 따라 후보·상대 응수 탐색의 폭과 전략 비중이 달라지며 규칙·추첨·지급 자원은 같습니다. 현재 시장 과투자 수정은 모든 난이도에 적용됩니다. 난이도 이름이 숙련자 상대 승률을 입증하는 것은 아닙니다.
 
 빠른 판단은 사용자 중단이나 계산 실패 복구를 제외하고 최소10초 실제 탐색을 완료한 뒤 수순을 실행합니다. 전략 AI는 행동 라운드 전체 최대10·20·30·60·120초를 고르며 새 프로필 기본값은60초입니다. 투자 타일 선점·득점 직전·전쟁 준비에 시간을 집중하고 후보와 상대 응수를 넓힙니다. 한 가지뿐인 필수 선택은 빨리 처리할 수 있습니다. 초기 구동과 행동 연출은 추가 시간이며 행동마다 기다리는 지연 설정과는 다릅니다.
 
 모든 난이도가 라운드 시작과 예상 종료의 순개선량을 비교합니다. 득점·상대 득점 방해, 시장 접근, 할인, 투자 효율, 전쟁 준비와 미소진 상대 이점의 즉시 위협을 평가합니다. 확인한 정보가 같으면 수순을 이어가고 새 정보 뒤에는 남은 예산으로 재검토할 수 있습니다. 실제 합법 명령과 가능한 비공개 정보 표본으로 계산하며 상대 실제 손패·미래 추첨 순서를 보지 않습니다.
 
-합법 선택 가능한 왕위계승 시대 내각은 영국 스위프트+핼리, 프랑스 추기경 장관들+존 로를 우선합니다. 시대·공개 내각 유지·자코바이트 제한을 지킵니다. 그 밖에는 선호·손패 키워드·일부 지속 효과 가치를 사용하며 내각 선택은 라운드 탐색과 별도입니다.
+합법 선택 가능한 왕위계승 시대 내각은 영국 스위프트+핼리, 프랑스 추기경 장관들+존 로를 우선합니다. 시대·공개 내각 유지·자코바이트 제한을 지킵니다. 그 밖의 내각 선택은 조건·남은 사용 기회·보드 기반·손패 키워드 연계를 평가하며 라운드 탐색과는 별도로 진행합니다.
 
 AI 행동 관찰은 기본 켜짐·3초이며1~5초 또는 끄기를 고릅니다. 오른쪽에서 투자 선택·공개 카드·대상 지역·변경 전후를 확인하고 지도 자동 이동도 끌 수 있습니다. P 정지/재개·N 다음·K 이번 라운드 연출 넘기기를 사용합니다. 전쟁 연출은 별도 개인 설정이며 온라인에서도 각자 결과를 봅니다. 연출을 넘겨도 필수 게임 선택을 건너뛰지 않습니다.
 
@@ -303,9 +303,13 @@ The shared VP track starts at 15. French gains move it up; British gains move it
 ## More screens / 다른 화면
 
 <details>
-<summary>Main menus / 메인 메뉴 · v0.1.11</summary>
+<summary>Earlier menu screenshots (v0.1.11) / 이전 메뉴 참고 화면</summary>
 
-![English menu v0.1.11](images/menu-en.jpg)
+These v0.1.11 screenshots are historical references, not the current download version. The current public release is [v0.1.37](https://github.com/oga8867/imperial-struggle-releases/releases/tag/v0.1.37).
+
+아래는 v0.1.11의 이전 메뉴 화면이며 현재 배포 버전을 뜻하지 않습니다. 현재 공개판은 v0.1.37입니다.
+
+![English menu from v0.1.11](images/menu-en.jpg)
 
 ![한국어 메인 메뉴 v0.1.11](images/menu-ko.jpg)
 
