@@ -6,25 +6,21 @@ GMT Games의 보드게임 제국의 투쟁을 Windows에서 플레이할 수 있
 
 [Download the latest game / 최신 게임 다운로드](https://github.com/oga8867/imperial-struggle-releases/releases/latest) · [English introduction](#english) · [한국어 소개](#korean) · [Online guide / 온라인 안내](ONLINE_GUIDE.md) · [Keyboard controls / 단축키](KEYBOARD_CONTROLS.md)
 
-Current public release: [v0.1.37](https://github.com/oga8867/imperial-struggle-releases/releases/tag/v0.1.37), Windows x64 general build. 현재 공개 일반판은 [v0.1.37](https://github.com/oga8867/imperial-struggle-releases/releases/tag/v0.1.37)입니다.
+Current public release: [v0.1.38](https://github.com/oga8867/imperial-struggle-releases/releases/tag/v0.1.38), Windows x64 general build. 현재 공개 일반판은 [v0.1.38](https://github.com/oga8867/imperial-struggle-releases/releases/tag/v0.1.38)입니다.
 
-## What changed in 0.1.37 / 이번 수정
+## What changed in 0.1.38 / 이번 수정
 
-This release brings the current development improvements to the general Windows build. Human-versus-AI, local two-player and host-based online play remain available. AI-versus-AI comparison and internal observer/replay tools are kept in the internal test build.
+- Four AI choices: Easy, Normal, Hard (preserved 0.1.37 AI), and Harder (current 0.1.38 AI). Thinking time is independent; Normal remains the default. These names are choices, not a measured strength guarantee.
+- The current AI compares European diplomatic tempo and competing foundations, actual discount opportunities, shared future Advantage targets/use limits, and lower-priority CP Market conquest when a legal Territory/Fort alternative exists. Both AIs follow the latest common game rules and hidden-information limits.
+- France can choose first or second on the first Peace Turn. Naval Bastion requires Gibraltar alone and explains ownership/European use limits. France's eligible free Jacobite third Ministry is included automatically, alongside two regular choices; reveal rules remain unchanged.
+- Automatic updating starts in this release: download a newer stable version during play, then replace managed game files after a normal exit. Official 0.1.37 lacks the updater and needs one manual installation of 0.1.38. Save your game before exit; personal saves and settings remain.
+- Human-versus-AI, local two-player and host-based online play remain. AI self-play/comparison and internal observer tools stay in the separate internal build. Eleven licensed classical tracks and their credits remain bundled.
 
-- AI evaluates long-term Ministry foundations, repeatable Advantages, opposing threats, draft opportunities, Squadron efficiency and war preparation. Extra Markets no longer earn an unlimited generic ownership bonus after a region is secured; real commodity, Ministry, access and Advantage gains still matter. These are heuristic improvements, not a measured expert-level win rate.
-- Revealed opposing Ministries show use status for each ability. Halley's two abilities are separate; repeatable abilities retain their reuse rules. Unrevealed Ministries stay hidden.
-- The missing Ohio Forks–Québec & Montreal and San Agustín–Carolinas Conquest Lines are restored, including when loading older saves. Martinique–Antigua economic access is also corrected.
-- Settings now offer windowed, borderless and fullscreen display, saved audio controls and quiet click feedback. Eleven classical tracks play through a shuffled complete bag before repeating. Per-recording credits and licenses are included. Mozart 31 I and Scheherazade III remain pending.
-- Save archives, F8 War Display toggle, card catalog filters/navigation, map inspection, Ministry reminders and turn/war transition handling include the intervening development fixes.
-
-최신 개발 변경을 일반 Windows 배포판에 반영했습니다. 사람이 AI와 하는 대전·한 컴퓨터 2인·방장 서버 온라인은 유지하며, AI끼리 대전·비교와 내부 관전·리플레이 도구는 내부 테스트판에만 둡니다.
-
-- 내각 기반·반복 이점·상대 견제·투자 타일·함대 효율·전쟁 준비를 함께 평가합니다. 이미 확보한 지역에 시장을 추가하는 것만으로 점수가 계속 늘던 평가를 수정하되, 실제 세계 수요·내각·접근권·이점의 이익은 유지합니다. 숙련자 상대 승률이 입증된 것은 아닙니다.
-- 상대 공개 내각에 능력별 이번 평화 턴 사용 여부를 표시합니다. 핼리의 두 능력은 따로 표시하고 반복 능력과 미공개 정보 규칙도 유지합니다.
-- 오하이오 포크–퀘벡·몬트리올과 산아구스틴–캐롤라이나 정복선을 보완하고 옛 저장에도 적용합니다. 마르티니크–앤티가 경제 접근도 수정했습니다.
-- 창·전체 창·전체화면과 저장되는 소리 설정, 작은 클릭음, 클래식 11곡을 제공합니다. 모든 곡을 소진한 뒤 다시 섞으며 음원별 출처·라이선스를 동봉합니다. 모차르트31번1악장·세헤라자데3악장은 보류입니다.
-- 저장 보관함·F8 전쟁 표시판 토글·카드 필터/방향키·지도 확인·내각 알림·턴/전쟁 전환의 누적 개선도 포함합니다.
+- 난이도를 쉬움·보통·어려움(보존0.1.37 AI)·더 어려움(현재0.1.38 AI)으로 제공합니다. 계산 시간은 별도이고 기본은 보통입니다. 강도 우위가 통계적으로 입증됐다는 뜻은 아닙니다.
+- 현재 AI는 유럽 외교 템포와 기반 경쟁, 실제로 소비할 할인, 이점의 겹치는 대상/미래 사용 용량을 함께 비교합니다. CP는 합법 영지·요새가 있으면 시장을 후순위로 봅니다. 두 AI 모두 최신 공통 게임 규칙과 비공개 정보 제한을 지킵니다.
+- 첫 평화 턴 프랑스의 선후공 선택, 지브롤터만 요구하는 해군 거점과 정확한 불가 이유, 일반 내각 두 장에 무료 자코바이트 세 번째 내각 자동 포함을 반영했습니다. 자동 선택은 자동 공개/발동이 아닙니다.
+- 자동 업데이트는 이번38부터 지원합니다. 새 정식 버전을 내려받고 정상 종료 때 게임 파일을 교체합니다. 공개37에는 갱신기가 없으므로38을 한 번 수동 설치해야 합니다. 종료 전 현재 판을 저장하세요. 개인 저장·설정은 유지합니다.
+- 사람 대 AI·한 컴퓨터2인·방장 서버 온라인은 유지하고 AI끼리 대전·비교 및 내부 관전 도구는 별도 내부판에 둡니다. 클래식11곡과 출처 고지도 유지합니다.
 
 ## Downloads / 다운로드
 
@@ -34,8 +30,8 @@ Open the release page and expand Assets. Download one of the two game packages b
 
 | Package / 파일 | Use / 용도 |
 | --- | --- |
-| [ImperialStruggle-0.1.37-Windows-x64-Setup.exe](https://github.com/oga8867/imperial-struggle-releases/releases/download/v0.1.37/ImperialStruggle-0.1.37-Windows-x64-Setup.exe) | Install and launch from the Start menu / 설치한 뒤 시작 메뉴에서 실행 |
-| [ImperialStruggle-0.1.37-Windows-x64-Portable.zip](https://github.com/oga8867/imperial-struggle-releases/releases/download/v0.1.37/ImperialStruggle-0.1.37-Windows-x64-Portable.zip) | Extract the whole folder and run ImperialStruggle.exe / 전체 압축을 풀고 ImperialStruggle.exe 실행 |
+| [ImperialStruggle-0.1.38-Windows-x64-Setup.exe](https://github.com/oga8867/imperial-struggle-releases/releases/download/v0.1.38/ImperialStruggle-0.1.38-Windows-x64-Setup.exe) | Install and launch from the Start menu / 설치한 뒤 시작 메뉴에서 실행 |
+| [ImperialStruggle-0.1.38-Windows-x64-Portable.zip](https://github.com/oga8867/imperial-struggle-releases/releases/download/v0.1.38/ImperialStruggle-0.1.38-Windows-x64-Portable.zip) | Extract the whole folder and run ImperialStruggle.exe / 전체 압축을 풀고 ImperialStruggle.exe 실행 |
 
 Each version has only these two download assets. SHA-256 checksums are listed in the release description; build and verification records are retained locally. For connection instructions, see the [online guide](ONLINE_GUIDE.md).
 
@@ -76,7 +72,7 @@ The build targets 64-bit Windows 10/11 with OpenGL 3.3 graphics. The bundled Not
 
 ![English gameplay and AI action observer](images/ai-sidebar-en-actions.png)
 
-Reference gameplay screenshot from v0.1.7. The current v0.1.37 layout has since changed; see the release notes above for current improvements.
+Reference gameplay screenshot from v0.1.7. The current v0.1.38 layout has since changed; see the release notes above for current improvements.
 
 | Area | Information and controls |
 | --- | --- |
@@ -190,7 +186,7 @@ Windows10/11 64비트와 OpenGL3.3 그래픽을 기준으로 제작했습니다.
 
 ![한국어 게임 화면과 오른쪽 AI 행동 관찰](images/ai-sidebar-ko-actions.png)
 
-이 이미지는 v0.1.7의 이전 게임 화면입니다. 현재 공개판은 v0.1.37이며 화면 배치가 달라질 수 있습니다. 최신 변경은 위의 릴리스 안내를 확인하세요.
+이 이미지는 v0.1.7의 이전 게임 화면입니다. 현재 공개판은 v0.1.38이며 화면 배치가 달라질 수 있습니다. 최신 변경은 위의 릴리스 안내를 확인하세요.
 
 | 위치 | 확인할 정보와 조작 |
 | --- | --- |
@@ -305,9 +301,9 @@ The shared VP track starts at 15. French gains move it up; British gains move it
 <details>
 <summary>Earlier menu screenshots (v0.1.11) / 이전 메뉴 참고 화면</summary>
 
-These v0.1.11 screenshots are historical references, not the current download version. The current public release is [v0.1.37](https://github.com/oga8867/imperial-struggle-releases/releases/tag/v0.1.37).
+These v0.1.11 screenshots are historical references, not the current download version. The current public release is [v0.1.38](https://github.com/oga8867/imperial-struggle-releases/releases/tag/v0.1.38).
 
-아래는 v0.1.11의 이전 메뉴 화면이며 현재 배포 버전을 뜻하지 않습니다. 현재 공개판은 v0.1.37입니다.
+아래는 v0.1.11의 이전 메뉴 화면이며 현재 배포 버전을 뜻하지 않습니다. 현재 공개판은 v0.1.38입니다.
 
 ![English menu from v0.1.11](images/menu-en.jpg)
 
