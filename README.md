@@ -6,9 +6,24 @@ GMT Games의 보드게임 제국의 투쟁을 Windows에서 플레이할 수 있
 
 [Download the latest game / 최신 게임 다운로드](https://github.com/oga8867/imperial-struggle-releases/releases/latest) · [English introduction](#english) · [한국어 소개](#korean) · [Online guide / 온라인 안내](ONLINE_GUIDE.md) · [Keyboard controls / 단축키](KEYBOARD_CONTROLS.md)
 
-Current public release: [v0.1.38](https://github.com/oga8867/imperial-struggle-releases/releases/tag/v0.1.38), Windows x64 general build. 현재 공개 일반판은 [v0.1.38](https://github.com/oga8867/imperial-struggle-releases/releases/tag/v0.1.38)입니다.
+Current public release: [v0.1.39](https://github.com/oga8867/imperial-struggle-releases/releases/tag/v0.1.39), Windows x64 general build. 현재 공개 일반판은 [v0.1.39](https://github.com/oga8867/imperial-struggle-releases/releases/tag/v0.1.39)입니다.
 
-## What changed in 0.1.38 / 이번 수정
+## What changed in 0.1.39 / 이번 수정
+
+- Opponent-turn pondering is now on by default in Settings > AI / War presentation. The choice persists across restarts; turn it off to use the original search.
+- During the opponent's peace action round, a separate low-priority process predicts from your AI's information and public information. It stops when the AI needs to choose. Its own thinking-time budget stays the same; extra CPU is used during the opponent's turn.
+- Predictions only reorder currently legal candidates. Both existing AI profiles keep their evaluation and candidate/reply limits. Stale or unavailable predictions fall back to the original search. A strength improvement has not been established.
+- Version 0.1.38 can receive this stable release through its updater after a normal exit. Save the current game first. Official 0.1.37 and older versions need one manual installation of the latest release. Personal saves/settings remain.
+- Human-versus-AI, local two-player and online play remain available. AI self-play/comparison and internal observer tools remain exclusive to the internal build.
+
+- 설정 → AI·전쟁 연출의 ‘상대 차례에 미리 계산하기’를 기본 켜짐으로 추가했습니다. 재시작 후에도 유지되며 끄면 기존 검색을 사용합니다.
+- 상대 평화 행동 라운드 동안 자기 정보와 공개 정보만 별도 저우선순위 프로그램에서 계산하고, AI가 선택할 차례에 중단합니다. 자기 차례 생각 시간은 늘리지 않으며 상대 차례에 CPU를 추가 사용합니다.
+- 현재 합법 후보의 순서만 조정하고 기존 두 AI의 평가·후보/응수 폭을 유지합니다. 오래되거나 없는 예측은 기존 검색으로 처리합니다. 강도 향상은 아직 입증되지 않았습니다.
+- 기존0.1.38은 현재 판을 저장하고 정상 종료하면 자동 업데이트를 받을 수 있습니다. 공개0.1.37 이하는 최신판을 한 번 수동 설치해야 합니다. 개인 저장·설정은 유지합니다.
+- 사람 대 AI·한 컴퓨터2인·온라인은 유지하고 AI끼리 대전·비교와 내부 관전 기능은 내부판에 둡니다.
+
+## Previous 0.1.38 changes / 이전0.1.38 변경
+
 
 - Four AI choices: Easy, Normal, Hard (preserved 0.1.37 AI), and Harder (current 0.1.38 AI). Thinking time is independent; Normal remains the default. These names are choices, not a measured strength guarantee.
 - The current AI compares European diplomatic tempo and competing foundations, actual discount opportunities, shared future Advantage targets/use limits, and lower-priority CP Market conquest when a legal Territory/Fort alternative exists. Both AIs follow the latest common game rules and hidden-information limits.
@@ -30,8 +45,8 @@ Open the release page and expand Assets. Download one of the two game packages b
 
 | Package / 파일 | Use / 용도 |
 | --- | --- |
-| [ImperialStruggle-0.1.38-Windows-x64-Setup.exe](https://github.com/oga8867/imperial-struggle-releases/releases/download/v0.1.38/ImperialStruggle-0.1.38-Windows-x64-Setup.exe) | Install and launch from the Start menu / 설치한 뒤 시작 메뉴에서 실행 |
-| [ImperialStruggle-0.1.38-Windows-x64-Portable.zip](https://github.com/oga8867/imperial-struggle-releases/releases/download/v0.1.38/ImperialStruggle-0.1.38-Windows-x64-Portable.zip) | Extract the whole folder and run ImperialStruggle.exe / 전체 압축을 풀고 ImperialStruggle.exe 실행 |
+| [ImperialStruggle-0.1.39-Windows-x64-Setup.exe](https://github.com/oga8867/imperial-struggle-releases/releases/download/v0.1.39/ImperialStruggle-0.1.39-Windows-x64-Setup.exe) | Install and launch from the Start menu / 설치한 뒤 시작 메뉴에서 실행 |
+| [ImperialStruggle-0.1.39-Windows-x64-Portable.zip](https://github.com/oga8867/imperial-struggle-releases/releases/download/v0.1.39/ImperialStruggle-0.1.39-Windows-x64-Portable.zip) | Extract the whole folder and run ImperialStruggle.exe / 전체 압축을 풀고 ImperialStruggle.exe 실행 |
 
 Each version has only these two download assets. SHA-256 checksums are listed in the release description; build and verification records are retained locally. For connection instructions, see the [online guide](ONLINE_GUIDE.md).
 
